@@ -1,0 +1,34 @@
+==============================================================================
+ NAMESPACES - apld-20260531_htm.xml
+ Generated: C:\Users\Admin\projects\sec-schema-poc\notes\day3_inspection\namespaces.txt
+==============================================================================
+
+==============================================================================
+NAMESPACE DECLARATIONS: apld-20260531_htm.xml
+  C:\Users\Admin\projects\sec-schema-poc\cache\0001144879\0001144879-26-000048\apld-20260531_htm.xml
+  14 namespace(s) declared
+  Legend: [standard] = FASB/SEC taxonomy (us-gaap, dei, srt);
+          [COMPANY]  = registrant-invented (apld)
+          [other]    = unrecognized URI
+==============================================================================
+
+  dei        -> http://xbrl.sec.gov/dei/2026  [standard]  <-- SEC document & entity info
+  srt        -> http://fasb.org/srt/2026  [standard]  <-- SEC statement reporting types
+  us-gaap    -> http://fasb.org/us-gaap/2026  [standard]  <-- GAAP taxonomy
+  (default)  -> http://www.xbrl.org/2003/instance  [standard]
+  apld       -> http://appliedblockchaininc.com/20260531  [COMPANY - registrant-invented]
+  cyd        -> http://xbrl.sec.gov/cyd/2026  [standard]
+  ecd        -> http://xbrl.sec.gov/ecd/2026  [standard]
+  iso4217    -> http://www.xbrl.org/2003/iso4217  [standard]
+  link       -> http://www.xbrl.org/2003/linkbase  [standard]
+  stpr       -> http://xbrl.sec.gov/stpr/2026  [standard]
+  xbrldi     -> http://xbrl.org/2006/xbrldi  [standard]
+  xhtml      -> http://www.w3.org/1999/xhtml  [standard]
+  xlink      -> http://www.w3.org/1999/xlink  [standard]
+  xsi        -> http://www.w3.org/2001/XMLSchema-instance  [standard]
+
+SUMMARY
+
+  Standard (FASB/SEC): (default), cyd, dei, ecd, iso4217, link, srt, stpr, us-gaap, xbrldi, xhtml, xlink, xsi
+  Company (registrant): apld
+  Other: (none)

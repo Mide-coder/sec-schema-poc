@@ -1,0 +1,47 @@
+==============================================================================
+ CALC VS PRESENTATION
+ Generated: C:\Users\Admin\projects\sec-schema-poc\notes\day3_inspection\linkbase_comparison.txt
+==============================================================================
+
+==============================================================================
+CALC vs PRESENTATION LINKBASE
+  calc: apld-20260531_cal.xml
+  pre:  apld-20260531_pre.xml
+  68 parents / 225 parents parsed
+==============================================================================
+
+COMPARING CONCEPT: us-gaap:LongTermDebt
+
+WHY THIS ONE: it matches debt keywords and appears in both files.
+
+A) CALCULATION LINKBASE -- what sums into it (the MATH)
+
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths [order=1, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo [order=2, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree [order=3, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour [order=4, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive [order=5, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive [order=6, weight=1.0, standard]
+
+B) PRESENTATION LINKBASE -- how it is displayed (the LAYOUT)
+
+      'us-gaap:LongTermDebt' is NOT a parent in _pre.xml; it is a line item:
+      displayed under: us-gaap:DebtInstrumentLineItems
+      displayed under: us-gaap:DebtInstrumentLineItems
+
+C) THE CHILDREN THAT CAL SUMS -- where they appear in PRESENTATION
+
+      us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive -> under: us-gaap:DebtInstrumentLineItems
+      us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths -> under: us-gaap:DebtInstrumentLineItems
+      us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive -> under: us-gaap:DebtInstrumentLineItems
+      us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour -> under: us-gaap:DebtInstrumentLineItems
+      us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree -> under: us-gaap:DebtInstrumentLineItems
+      us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo -> under: us-gaap:DebtInstrumentLineItems
+
+KEY TAKEAWAY
+  _cal.xml encodes arithmetic relationships (what adds up to what), so a
+  parent like LongTermDebt has maturity-bucket children.  _pre.xml encodes
+  the statement LAYOUT (row order / grouping), so the same concept usually
+  appears once, as a child of an 'Abstract' or 'LineItems' parent, or as a
+  single line item.  A concept may be a parent in one linkbase and a child
+  in the other.

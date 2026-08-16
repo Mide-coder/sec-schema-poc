@@ -1,0 +1,151 @@
+==============================================================================
+ CALCULATION ARCS - apld-20260531_cal.xml
+ Generated: C:\Users\Admin\projects\sec-schema-poc\notes\day3_inspection\calc_arcs.txt
+==============================================================================
+
+==============================================================================
+CALCULATION LINKBASE: apld-20260531_cal.xml
+  C:\Users\Admin\projects\sec-schema-poc\cache\0001144879\0001144879-26-000048\apld-20260531_cal.xml
+  Total arcs parsed: 342 | Debt-related arcs: 52
+  Keywords: debt, loan, note, borrow, financing, obligation
+  NOTE: 'standard' = defined by fasb.org / xbrl.sec.gov (us-gaap, dei, srt);
+        'company'  = defined by the registrant's own schema (apld)
+==============================================================================
+
+1) TABLE OF DEBT-RELATED CALCULATION ARCS
+
+  Parent concept                                        Child concept                                         Weight  Order  Parent type  Child type
+  --------------------------------------------------------------------------------------------------------------------------------------------------
+  us-gaap:Liabilities                                   us-gaap:LongTermNotesPayable                          1.0     4      standard     standard  
+  us-gaap:LiabilitiesCurrent                            us-gaap:NotesPayableCurrent                           1.0     8      standard     standard  
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   apld:GainLossOnConversionOfDebt                       1.0     3      standard     company   
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   apld:DebtFairValueAdjustment                          1.0     4      standard     company   
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   apld:RelatedPartyDebtFairValueAdjustment              1.0     5      standard     company   
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   us-gaap:GainsLossesOnExtinguishmentOfDebt             1.0     6      standard     standard  
+  us-gaap:NetCashProvidedByUsedInInvestingActivities    us-gaap:PaymentsToFundLongtermLoansToRelatedParties   -1.0    6      standard     standard  
+  us-gaap:NetCashProvidedByUsedInOperatingActivities    us-gaap:GainsLossesOnExtinguishmentOfDebt             -1.0    7      standard     standard  
+  us-gaap:NetCashProvidedByUsedInOperatingActivities    us-gaap:AmortizationOfFinancingCosts                  1.0     9      standard     standard  
+  us-gaap:NetCashProvidedByUsedInOperatingActivities    apld:GainLossOnConversionOfDebt                       -1.0    11     standard     company   
+  us-gaap:NetCashProvidedByUsedInOperatingActivities    apld:DebtFairValueAdjustment                          -1.0    12     standard     company   
+  us-gaap:NetCashProvidedByUsedInOperatingActivities    apld:RelatedPartyDebtAndWarrantsFairValueAdjustment   -1.0    13     standard     company   
+  us-gaap:CashCashEquivalentsRestrictedCashAndRestric   us-gaap:NetCashProvidedByUsedInFinancingActivities    1.0     3      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:FinanceLeasePrincipalPayments                 -1.0    1      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromIssuanceOfMediumTermNotes         1.0     2      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromRelatedPartyDebt                  1.0     3      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:RepaymentsOfMediumTermNotes                   -1.0    4      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:RepaymentsOfRelatedPartyDebt                  -1.0    5      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsOfFinancingCosts                      -1.0    6      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsRelatedToTaxWithholdingForShareBase   -1.0    7      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromIssuanceOfCommonStock             1.0     8      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsOfStockIssuanceCosts                  -1.0    9      standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromIssuanceOfPreferredStockAndPref   1.0     10     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    apld:PaymentsOfStockIssuanceCostsPreferredStock       -1.0    11     standard     company   
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsForRepurchaseOfPreferredStockAndPre   -1.0    12     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsOfDividendsPreferredStockAndPrefere   -1.0    13     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromWarrantExercises                  1.0     14     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    apld:ProceedsFromEquityMethodInvestmentFinancingAct   1.0     15     standard     company   
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsForRepurchaseOfCommonStock            -1.0    16     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromConvertibleDebt                   1.0     17     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    apld:PaymentsForCappedCall                            -1.0    18     standard     company   
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsForDerivativeInstrumentFinancingAct   -1.0    19     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromMinorityShareholders              1.0     20     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:PaymentsToMinorityShareholders                -1.0    21     standard     standard  
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    apld:PaymentsOfWarrantIssuanceCosts                   -1.0    22     standard     company   
+  us-gaap:NetCashProvidedByUsedInFinancingActivities    us-gaap:ProceedsFromIssuanceOfWarrants                1.0     23     standard     standard  
+  us-gaap:BusinessCombinationRecognizedIdentifiableAs   apld:BusinessCombinationRecognizedIdentifiableAsset   1.0     5      standard     company   
+  us-gaap:BusinessCombinationRecognizedIdentifiableAs   apld:BusinessCombinationRecognizedIdentifiableAsset   1.0     7      standard     company   
+  us-gaap:AssetsOfDisposalGroupIncludingDiscontinuedO   us-gaap:DisposalGroupIncludingDiscontinuedOperation   1.0     2      standard     standard  
+  us-gaap:InterestExpenseNonoperating                   us-gaap:InterestExpenseDebt                           1.0     1      standard     standard  
+  us-gaap:LongTermDebt                                  us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipal   1.0     1      standard     standard  
+  us-gaap:LongTermDebt                                  us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipal   1.0     2      standard     standard  
+  us-gaap:LongTermDebt                                  us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipal   1.0     3      standard     standard  
+  us-gaap:LongTermDebt                                  us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipal   1.0     4      standard     standard  
+  us-gaap:LongTermDebt                                  us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipal   1.0     5      standard     standard  
+  us-gaap:LongTermDebt                                  us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipal   1.0     6      standard     standard  
+  us-gaap:PrepaidExpenseAndOtherAssetsCurrent           us-gaap:NotesAndLoansReceivableNetCurrent             1.0     6      standard     standard  
+  us-gaap:EffectiveIncomeTaxRateContinuingOperations    apld:EffectiveIncomeTaxRateReconciliationConvertibl   1.0     13     standard     company   
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   us-gaap:GainsLossesOnExtinguishmentOfDebt             1.0     3      standard     standard  
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   apld:RelatedPartyDebtFairValueAdjustment              1.0     4      standard     company   
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   apld:DebtFairValueAdjustment                          1.0     5      standard     company   
+  us-gaap:IncomeLossFromContinuingOperationsBeforeInc   apld:GainLossOnConversionOfDebt                       1.0     7      standard     company   
+
+2) TREE VIEW (unique parents -> children, by order)
+
+  us-gaap:AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent
+      + us-gaap:DisposalGroupIncludingDiscontinuedOperationAccountsNotesAndLoansReceivableNet [order=2, weight=1.0, standard]
+  us-gaap:BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedLiabilities
+      + apld:BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedDebtCurrent [order=5, weight=1.0, company]
+      + apld:BusinessCombinationRecognizedIdentifiableAssetsAcquiredAndLiabilitiesAssumedDebtNoncurrent [order=7, weight=1.0, company]
+  us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect
+      + us-gaap:NetCashProvidedByUsedInFinancingActivities      [order=3, weight=1.0, standard]
+  us-gaap:EffectiveIncomeTaxRateContinuingOperations
+      + apld:EffectiveIncomeTaxRateReconciliationConvertibleDebtInstrumentsPercent [order=13, weight=1.0, company]
+  us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest
+      + apld:GainLossOnConversionOfDebt                         [order=3, weight=1.0, company]
+      + us-gaap:GainsLossesOnExtinguishmentOfDebt               [order=3, weight=1.0, standard]
+      + apld:DebtFairValueAdjustment                            [order=4, weight=1.0, company]
+      + apld:RelatedPartyDebtFairValueAdjustment                [order=4, weight=1.0, company]
+      + apld:DebtFairValueAdjustment                            [order=5, weight=1.0, company]
+      + apld:RelatedPartyDebtFairValueAdjustment                [order=5, weight=1.0, company]
+      + us-gaap:GainsLossesOnExtinguishmentOfDebt               [order=6, weight=1.0, standard]
+      + apld:GainLossOnConversionOfDebt                         [order=7, weight=1.0, company]
+  us-gaap:InterestExpenseNonoperating
+      + us-gaap:InterestExpenseDebt                             [order=1, weight=1.0, standard]
+  us-gaap:Liabilities
+      + us-gaap:LongTermNotesPayable                            [order=4, weight=1.0, standard]
+  us-gaap:LiabilitiesCurrent
+      + us-gaap:NotesPayableCurrent                             [order=8, weight=1.0, standard]
+  us-gaap:LongTermDebt
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths [order=1, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo [order=2, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree [order=3, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour [order=4, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive [order=5, weight=1.0, standard]
+      + us-gaap:LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive [order=6, weight=1.0, standard]
+  us-gaap:NetCashProvidedByUsedInFinancingActivities
+      - us-gaap:FinanceLeasePrincipalPayments                   [order=1, weight=-1.0, standard]
+      + us-gaap:ProceedsFromIssuanceOfMediumTermNotes           [order=2, weight=1.0, standard]
+      + us-gaap:ProceedsFromRelatedPartyDebt                    [order=3, weight=1.0, standard]
+      - us-gaap:RepaymentsOfMediumTermNotes                     [order=4, weight=-1.0, standard]
+      - us-gaap:RepaymentsOfRelatedPartyDebt                    [order=5, weight=-1.0, standard]
+      - us-gaap:PaymentsOfFinancingCosts                        [order=6, weight=-1.0, standard]
+      - us-gaap:PaymentsRelatedToTaxWithholdingForShareBasedCompensation [order=7, weight=-1.0, standard]
+      + us-gaap:ProceedsFromIssuanceOfCommonStock               [order=8, weight=1.0, standard]
+      - us-gaap:PaymentsOfStockIssuanceCosts                    [order=9, weight=-1.0, standard]
+      + us-gaap:ProceedsFromIssuanceOfPreferredStockAndPreferenceStock [order=10, weight=1.0, standard]
+      - apld:PaymentsOfStockIssuanceCostsPreferredStock         [order=11, weight=-1.0, company]
+      - us-gaap:PaymentsForRepurchaseOfPreferredStockAndPreferenceStock [order=12, weight=-1.0, standard]
+      - us-gaap:PaymentsOfDividendsPreferredStockAndPreferenceStock [order=13, weight=-1.0, standard]
+      + us-gaap:ProceedsFromWarrantExercises                    [order=14, weight=1.0, standard]
+      + apld:ProceedsFromEquityMethodInvestmentFinancingActivities [order=15, weight=1.0, company]
+      - us-gaap:PaymentsForRepurchaseOfCommonStock              [order=16, weight=-1.0, standard]
+      + us-gaap:ProceedsFromConvertibleDebt                     [order=17, weight=1.0, standard]
+      - apld:PaymentsForCappedCall                              [order=18, weight=-1.0, company]
+      - us-gaap:PaymentsForDerivativeInstrumentFinancingActivities [order=19, weight=-1.0, standard]
+      + us-gaap:ProceedsFromMinorityShareholders                [order=20, weight=1.0, standard]
+      - us-gaap:PaymentsToMinorityShareholders                  [order=21, weight=-1.0, standard]
+      - apld:PaymentsOfWarrantIssuanceCosts                     [order=22, weight=-1.0, company]
+      + us-gaap:ProceedsFromIssuanceOfWarrants                  [order=23, weight=1.0, standard]
+  us-gaap:NetCashProvidedByUsedInInvestingActivities
+      - us-gaap:PaymentsToFundLongtermLoansToRelatedParties     [order=6, weight=-1.0, standard]
+  us-gaap:NetCashProvidedByUsedInOperatingActivities
+      - us-gaap:GainsLossesOnExtinguishmentOfDebt               [order=7, weight=-1.0, standard]
+      + us-gaap:AmortizationOfFinancingCosts                    [order=9, weight=1.0, standard]
+      - apld:GainLossOnConversionOfDebt                         [order=11, weight=-1.0, company]
+      - apld:DebtFairValueAdjustment                            [order=12, weight=-1.0, company]
+      - apld:RelatedPartyDebtAndWarrantsFairValueAdjustment     [order=13, weight=-1.0, company]
+  us-gaap:PrepaidExpenseAndOtherAssetsCurrent
+      + us-gaap:NotesAndLoansReceivableNetCurrent               [order=6, weight=1.0, standard]
+
+3) DEBT ARCS BY ROLE (financial statement section)
+
+   30  ConsolidatedStatementsofCashFlows
+    6  DebtScheduleofMaturitiesofLongTermDebtDetails
+    4  ConsolidatedStatementsofOperations
+    4  BusinessSegmentsScheduleofSegmentProfitandaReconciliationtoNetIncomeLossBeforeIncomeTaxExpensesDetails
+    2  ConsolidatedBalanceSheets
+    2  BusinessCombinationScheduleofPreliminaryEstimatedFairValuesOfTheAssetsAcquiredAndLiabilitiesAssumedDetails
+    1  DiscontinuedOperationsScheduleofClassesofAssetsandLiabilitiesDetails
+    1  DebtScheduleofInterestIncomeandInterestExpenseDisclosureDetails
+    1  BalanceSheetComponentsDetails
+    1  IncomeTaxesScheduleofEffectiveTaxRateReconciliationDetails
