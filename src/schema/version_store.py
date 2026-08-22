@@ -2,7 +2,7 @@
 """
 version_store.py
 
-Day 7/9: Immutable schema version store.
+Immutable schema version store.
 - Loads existing versions from disk
 - Creates new versions only if content hash changed (no-op detection)
 - Enforces immutability: no written file is ever edited
@@ -14,7 +14,6 @@ from __future__ import annotations
 import json
 import logging
 from pathlib import Path
-from typing import Iterator
 
 from schema.schema_types import SchemaVersion
 from schema.graph import SchemaGraph
@@ -101,7 +100,7 @@ class SchemaStore:
             unresolved=tuple(
                 Concept(
                     name=c["name"],
-                    namespace_uri="",
+                    namespace_uri=c.get("namespace_uri", ""),
                     namespace_type=c["namespace_type"],
                     label=None,
                 )
@@ -146,7 +145,7 @@ class SchemaStore:
                 for a in version.dimension_arcs
             ],
             "unresolved": [
-                {"name": c.name, "namespace_type": c.namespace_type}
+                {"name": c.name, "namespace_type": c.namespace_type, "namespace_uri": c.namespace_uri}
                 for c in version.unresolved
             ],
         }
@@ -180,30 +179,42 @@ class SchemaStore:
         source_filing: str,
         taxonomy_year: str | None,
         unresolved: tuple = tuple(),
+        force_new: bool = False,
+        parent_version_id: str | None = None,
     ) -> SchemaVersion:
         """
         Create a new version from a graph, or return existing if hash matches.
         
+        Args:
+            force_new: If True, always create a new version (for amendments).
+            parent_version_id: Override parent version (for amendments pointing to original).
+        
         Returns:
             SchemaVersion (new or existing)
         """
+        # Determine parent version
+        if parent_version_id is None:
+            parent_version_id = self._latest_version_id()
+        
         # Build the version object (without ID)
         temp_version = graph.to_version(
             version_id="temp",  # Placeholder
-            parent_version_id=self._latest_version_id(),
+            parent_version_id=parent_version_id,
             source_filing=source_filing,
             taxonomy_year=taxonomy_year,
             unresolved=unresolved,
         )
         
         # No-op detection: does this hash already exist?
-        existing = self.get_version_for_hash(temp_version.content_hash)
-        if existing:
-            logger.info(
-                "No-op: filing %s matches version %s (hash=%s)",
-                source_filing, existing.version_id, existing.content_hash
-            )
-            return existing
+        if not force_new:
+            existing = self.get_version_for_hash(temp_version.content_hash)
+            if existing:
+                logger.info(
+                    "[%s] No-op: matches existing %s (hash=%s, concepts=%d)",
+                    source_filing, existing.version_id, existing.content_hash,
+                    len(existing.concepts),
+                )
+                return existing
         
         # New version needed
         new_id = self._next_version_id()
@@ -248,7 +259,8 @@ class SchemaStore:
     def get_version_for_accession(self, accession: str) -> SchemaVersion | None:
         """
         Find the version created for a specific filing accession number.
-        Returns the most recent match if multiple exist.
+        Returns the FIRST (original) match if multiple exist,
+        since the report was generated at initial processing time.
         """
         matches = [
             v for v in self._versions.values()
@@ -256,48 +268,6 @@ class SchemaStore:
         ]
         if not matches:
             return None
-        # Return latest by version_id sort
-        return sorted(matches, key=lambda v: v.version_id)[-1]
+        # Return first by version_id sort (original processing)
+        return sorted(matches, key=lambda v: v.version_id)[0]
 
-    def get_version_for_date(self, date_str: str) -> SchemaVersion | None:
-        """
-        Find the version active on a given date.
-        For now: returns the latest version whose source_filing date <= target.
-        (Simplified — full implementation needs filing date index.)
-        """
-        # TODO: Build date-based index when pipeline is wired
-        # For now, return latest version
-        latest = self._latest_version_id()
-        return self._versions.get(latest) if latest else None
-
-    def is_immutable(self, version_id: str) -> bool:
-        """
-        Verify that a version file on disk has not been modified since creation.
-        Recomputes hash from file contents and compares to stored hash.
-        """
-        version = self.get_version(version_id)
-        if version is None:
-            return False
-        
-        path = self.directory / f"{version_id}.json"
-        if not path.exists():
-            return False
-        
-        # Recompute hash from the stored JSON
-        with open(path, "rb") as f:
-            import hashlib
-            file_hash = hashlib.sha256(f.read()).hexdigest()[:16]
-        
-        # The content_hash is of the graph, not the file. 
-        # True immutability check: verify that re-serializing produces identical bytes.
-        try:
-            # Read original bytes
-            with open(path, "rb") as f:
-                original = f.read()
-            # Re-save and re-read
-            self._save_file(version)
-            with open(path, "rb") as f:
-                rewritten = f.read()
-            return original == rewritten
-        except Exception:
-            return False
