@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+
 """
 process_filing.py
 
-Day 9: End-to-end pipeline for a single filing.
+ End-to-end pipeline for a single filing.
 download (if needed) -> parse -> diff -> create version (or no-op)
 """
 
@@ -116,7 +116,6 @@ def process_filing(cik: str, accession: str) -> SchemaVersion | None:
         unresolved_concepts = []
         for classification in diff_result.classifications:
             if classification.classification == "NEW_EXTENSION_UNRESOLVED":
-                # Re-extract the concept from the model
                 for qname_obj, concept in model.qnameConcepts.items():
                     if str(qname_obj.localName) == classification.concept_name:
                         unresolved_concepts.append(Concept(

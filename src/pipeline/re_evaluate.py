@@ -1,8 +1,8 @@
-#!/usr/bin/env python3
+
 """
 re_evaluate.py
 
-Day 9: Self-healing re-evaluation.
+ Self-healing re-evaluation.
 After schema grows, re-classify prior filings' unresolved concepts
 against the NEW schema — without mutating historical versions.
 """
