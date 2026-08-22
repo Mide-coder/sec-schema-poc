@@ -28,7 +28,7 @@ SUBMISSIONS_FILE = CACHE_DIR / CIK / "submissions.json"
 
 
 def load_filings() -> list[dict]:
-    """Load 10-K/10-Q filings from Day 1 cache."""
+    """Load 10-K/10-Q filings from the local cache."""
     if not SUBMISSIONS_FILE.exists():
         logging.error("Submissions cache not found. Run fetch_submissions.py first.")
         sys.exit(1)

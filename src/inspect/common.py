@@ -14,7 +14,7 @@ Design notes
 - "Standard vs company" classification is done by namespace URI:
     * fasb.org / xbrl.sec.gov  -> standard (us-gaap, dei, srt, cyd, ecd, stpr)
     * anything else            -> company (e.g. http://appliedblockchaininc.com/...)
-- All report output is written to notes/day3_inspection/ and echoed to stdout.
+- All report output is written to the output directory and echoed to stdout.
 """
 
 from __future__ import annotations
@@ -30,9 +30,9 @@ from xml.etree import ElementTree as ET
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CACHE_DIR = PROJECT_ROOT / "cache"
-NOTES_DIR = PROJECT_ROOT / "notes" / "day3_inspection"
+NOTES_DIR = PROJECT_ROOT / "notes" / "inspection"
 
-# The 10-K filing from Day 1/2 caching
+# The 10-K filing from the local cache
 CIK = "0001144879"
 TARGET_ACCESSION = "0001144879-26-000048"
 TARGET_FILING_DIR = CACHE_DIR / CIK / TARGET_ACCESSION
@@ -236,7 +236,7 @@ def ensure_notes_dir() -> Path:
 
 def emit_report(filename: str, title: str, body: str, *, echo: bool = True) -> Path:
     """
-    Write `body` to notes/day3_inspection/<filename> and optionally echo it
+    Write `body` to notes/inspection/<filename> and optionally echo it
     to stdout.  Returns the written file path.
     """
     out_dir = ensure_notes_dir()

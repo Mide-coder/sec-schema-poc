@@ -4,3 +4,15 @@ __pycache__/
 cache/
 *.log
 .env
+
+# Working documents (not for repo)
+DECISIONS.md
+PLAN.md
+AGENT_HANDOFF.md
+IMPLEMENTED.md
+
+# Generated schema versions (built from filings, not source)
+schema_versions/
+
+# Generated HTML viewer
+schema_viewer.html

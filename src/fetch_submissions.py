@@ -55,7 +55,7 @@ def fetch_submissions(use_user_agent: bool = True) -> dict:
     headers = {}
     if use_user_agent:
         headers["User-Agent"] = USER_AGENT
-        logger.info("Fetching submissions with User-Agent: %s", USER_AGENT.split()[0])
+        logger.info("Fetching submissions for CIK %s with UA: %s", CIK, USER_AGENT.split()[0])
     else:
         logger.warning("Sending request WITHOUT User-Agent (expected 403)")
     

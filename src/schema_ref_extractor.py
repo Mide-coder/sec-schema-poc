@@ -30,6 +30,8 @@ def extract_taxonomy_info(model_xbrl) -> TaxonomyInfo:
     Arelle resolves all schemaRefs when loading the DTS. We inspect
     the modelDocument.referencesDocument map for schema-type references.
     """
+    accession = getattr(model_xbrl, 'accessionNumber', 'unknown')
+    logger.info("[%s] Extracting taxonomy schema references", accession)
     schema_refs: list[str] = []
     
     # Arelle stores referenced docs in referencesDocument (dict-like)

@@ -28,6 +28,7 @@ SUMMATION_ITEM_ARCROLE = "http://www.xbrl.org/2003/arcrole/summation-item"
 class StandardDebtConcept:
     name: str
     namespace_uri: str
+    namespace_type: str  # "STANDARD" | "COMPANY" | "OTHER"
     label: str | None
     is_total: bool  # True if it's a parent in calc arcs
     is_component: bool  # True if it's a child in calc arcs
@@ -71,7 +72,11 @@ class StandardTaxonomyBootstrap:
                     roots.append(concept)
         
         roots.sort(key=lambda c: str(c.qname.localName))
-        logger.info("Found %d standard debt root concepts", len(roots))
+        logger.info(
+            "Found %d standard debt root concepts: %s",
+            len(roots),
+            ", ".join(str(r.qname.localName) for r in roots),
+        )
         return roots
 
     def walk_calc_descendants(self, root_concept, visited: set[str] | None = None) -> list[StandardDebtConcept]:
@@ -92,6 +97,7 @@ class StandardTaxonomyBootstrap:
         results.append(StandardDebtConcept(
             name=str(root_concept.qname.localName),
             namespace_uri=str(root_concept.qname.namespaceURI),
+            namespace_type="STANDARD",
             label=None,  # Labels fetched separately if needed
             is_total=True,
             is_component=False,
@@ -114,6 +120,7 @@ class StandardTaxonomyBootstrap:
                 results.append(StandardDebtConcept(
                     name=str(child.qname.localName),
                     namespace_uri=str(child.qname.namespaceURI),
+                    namespace_type="STANDARD",
                     label=None,
                     is_total=False,
                     is_component=True,
@@ -131,7 +138,12 @@ class StandardTaxonomyBootstrap:
         all_concepts: dict[str, StandardDebtConcept] = {}
         
         for root in self.find_standard_debt_roots():
+            root_name = str(root.qname.localName)
             descendants = self.walk_calc_descendants(root)
+            logger.info(
+                "Root %s: %d descendants discovered",
+                root_name, len(descendants),
+            )
             for concept in descendants:
                 key = f"{concept.namespace_uri}#{concept.name}"
                 if key not in all_concepts:
@@ -142,11 +154,16 @@ class StandardTaxonomyBootstrap:
                     all_concepts[key] = StandardDebtConcept(
                         name=existing.name,
                         namespace_uri=existing.namespace_uri,
+                        namespace_type=existing.namespace_type,
                         label=existing.label,
                         is_total=existing.is_total or concept.is_total,
                         is_component=existing.is_component or concept.is_component,
                     )
         
+        logger.info(
+            "Seed list complete: %d unique standard debt concepts",
+            len(all_concepts),
+        )
         return sorted(all_concepts.values(), key=lambda c: c.name)
 
 

@@ -1,7 +1,7 @@
 """
-day7_demo.py
+version_store_test.py
 
-Day 7: Test SchemaStore — load v0, verify no-op detection, immutability.
+Test SchemaStore — load v0, verify no-op detection, immutability.
 """
 
 import sys

@@ -1,8 +1,8 @@
 
 """
-day6_demo.py
+taxonomy_extraction.py
 
- SchemaRef extraction, standard taxonomy bootstrap,
+SchemaRef extraction, standard taxonomy bootstrap,
 and dimension extraction on APLD's FY2025 10-K.
 """
 

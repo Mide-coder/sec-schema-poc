@@ -2,7 +2,7 @@
 """
 calc_tree.py
 
-Day 5: Extract calculation (summation-item) trees from Arelle models.
+Extracts calculation (summation-item) trees from Arelle models.
 """
 
 from __future__ import annotations
@@ -78,8 +78,9 @@ class CalcTreeExtractor:
             visited = set()
 
         qname_str = str(root_concept.qname)
+        local_name = str(root_concept.qname.localName)
         if qname_str in visited:
-            logger.warning("Cycle detected at %s — pruning branch", qname_str)
+            logger.warning("Cycle detected at %s (%s) — pruning branch", local_name, qname_str)
             return None
         visited.add(qname_str)
 
@@ -109,6 +110,17 @@ class CalcTreeExtractor:
                 if child_node:
                     node.children.append(child_node)
 
+        if not node.is_root:
+            logger.debug(
+                "Built node %s (weight=%+.1f, children=%d)",
+                local_name, weight_from_parent, len(node.children),
+            )
+        else:
+            logger.info(
+                "Building calc tree from root %s (%d children)",
+                local_name, len(node.children),
+            )
+
         return node
 
     def find_debt_roots(self) -> list:
@@ -131,6 +143,11 @@ class CalcTreeExtractor:
                     roots.append(parent)
 
         roots.sort(key=lambda c: str(c.qname.localName))
+        logger.info(
+            "Found %d debt root concepts: %s",
+            len(roots),
+            ", ".join(str(r.qname.localName) for r in roots),
+        )
         return roots
 
     def find_concept_by_name(self, name: str):

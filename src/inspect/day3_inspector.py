@@ -1,7 +1,7 @@
 """
 day3_inspector.py
 
-Consolidated runner for Day-3 XBRL inspection.  Runs all four diagnostic
+ Runs all four diagnostic
 scripts against the cached 10-K (0001144879-26-000048) and produces a
 single report:
 

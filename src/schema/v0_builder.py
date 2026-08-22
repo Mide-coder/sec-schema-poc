@@ -21,7 +21,7 @@ from schema.graph import SchemaGraph
 from standard_taxonomy_bootstrap import StandardTaxonomyBootstrap
 from dimension_extractor import DimensionExtractor
 from schema_ref_extractor import extract_taxonomy_info
-from xbrl_utils import classify_namespace
+
 
 logging.basicConfig(
     level=logging.INFO,
@@ -59,12 +59,15 @@ def build_v0_from_filing(accession: str) -> SchemaVersion | None:
     try:
         model = cntlr.modelManager.load(str(entry_point))
         if model is None or model.modelDocument is None:
-            logger.error("Arelle failed to load")
+            logger.error("[%s] Arelle failed to load entry point %s", accession, entry_point.name)
             return None
 
         # Detect taxonomy year
         tax_info = extract_taxonomy_info(model)
-        logger.info("US-GAAP year: %s", tax_info.us_gaap_year)
+        logger.info(
+            "[%s] US-GAAP taxonomy year: %s",
+            accession, tax_info.us_gaap_year,
+        )
 
         # Build graph
         graph = SchemaGraph()

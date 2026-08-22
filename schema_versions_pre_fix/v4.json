@@ -1,0 +1,6488 @@
+{
+  "calc_arcs": [
+    {
+      "child": "AssetsCurrent",
+      "order": 2.0,
+      "parent": "Assets",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseRightOfUseAsset",
+      "order": 1.0,
+      "parent": "Assets",
+      "weight": 1.0
+    },
+    {
+      "child": "OperatingLeaseRightOfUseAsset",
+      "order": 4.0,
+      "parent": "Assets",
+      "weight": 1.0
+    },
+    {
+      "child": "OtherAssets",
+      "order": 5.0,
+      "parent": "Assets",
+      "weight": 1.0
+    },
+    {
+      "child": "PropertyPlantAndEquipmentNet",
+      "order": 3.0,
+      "parent": "Assets",
+      "weight": 1.0
+    },
+    {
+      "child": "AccountsReceivableNetCurrent",
+      "order": 3.0,
+      "parent": "AssetsCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "order": 2.0,
+      "parent": "AssetsCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "CashAndCashEquivalentsAtCarryingValue",
+      "order": 4.0,
+      "parent": "AssetsCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "PrepaidExpenseAndOtherAssetsCurrent",
+      "order": 1.0,
+      "parent": "AssetsCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationAccountsNotesAndLoansReceivableNet",
+      "order": 2.0,
+      "parent": "AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationCashAndCashEquivalents",
+      "order": 1.0,
+      "parent": "AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationOtherCurrentAssets",
+      "order": 7.0,
+      "parent": "AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationPrepaidAndOtherAssetsCurrent",
+      "order": 3.0,
+      "parent": "AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationPropertyPlantAndEquipmentCurrent",
+      "order": 4.0,
+      "parent": "AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "CashAndCashEquivalentsAtCarryingValue",
+      "order": 1.0,
+      "parent": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "weight": 1.0
+    },
+    {
+      "child": "RestrictedCashNoncurrent",
+      "order": 4.0,
+      "parent": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "weight": 1.0
+    },
+    {
+      "child": "NetCashProvidedByUsedInFinancingActivities",
+      "order": 3.0,
+      "parent": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+      "weight": 1.0
+    },
+    {
+      "child": "NetCashProvidedByUsedInInvestingActivities",
+      "order": 2.0,
+      "parent": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+      "weight": 1.0
+    },
+    {
+      "child": "NetCashProvidedByUsedInOperatingActivities",
+      "order": 1.0,
+      "parent": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+      "weight": 1.0
+    },
+    {
+      "child": "CostOfRevenue",
+      "order": 1.0,
+      "parent": "CostsAndExpenses",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupNotDiscontinuedOperationGainLossOnDisposal",
+      "order": 3.0,
+      "parent": "CostsAndExpenses",
+      "weight": -1.0
+    },
+    {
+      "child": "GainLossOnDispositionOfAssets1",
+      "order": 4.0,
+      "parent": "CostsAndExpenses",
+      "weight": -1.0
+    },
+    {
+      "child": "GainLossRelatedToLitigationSettlement",
+      "order": 5.0,
+      "parent": "CostsAndExpenses",
+      "weight": -1.0
+    },
+    {
+      "child": "SellingGeneralAndAdministrativeExpense",
+      "order": 2.0,
+      "parent": "CostsAndExpenses",
+      "weight": 1.0
+    },
+    {
+      "child": "CurrentFederalTaxExpenseBenefit",
+      "order": 3.0,
+      "parent": "CurrentIncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "CurrentForeignTaxExpenseBenefit",
+      "order": 2.0,
+      "parent": "CurrentIncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "CurrentStateAndLocalTaxExpenseBenefit",
+      "order": 1.0,
+      "parent": "CurrentIncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredFederalIncomeTaxExpenseBenefit",
+      "order": 1.0,
+      "parent": "DeferredIncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredForeignIncomeTaxExpenseBenefit",
+      "order": 2.0,
+      "parent": "DeferredIncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredStateAndLocalIncomeTaxExpenseBenefit",
+      "order": 3.0,
+      "parent": "DeferredIncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxLiabilitiesLeasingArrangements",
+      "order": 3.0,
+      "parent": "DeferredIncomeTaxLiabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxLiabilitiesOther",
+      "order": 2.0,
+      "parent": "DeferredIncomeTaxLiabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxLiabilitiesPropertyPlantAndEquipment",
+      "order": 1.0,
+      "parent": "DeferredIncomeTaxLiabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxAssetsInProcessResearchAndDevelopment",
+      "order": 4.0,
+      "parent": "DeferredTaxAssetsGross",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxAssetsOperatingLossCarryforwards",
+      "order": 6.0,
+      "parent": "DeferredTaxAssetsGross",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxAssetsOther",
+      "order": 5.0,
+      "parent": "DeferredTaxAssetsGross",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxAssetsTaxDeferredExpenseCompensationAndBenefitsShareBasedCompensationCost",
+      "order": 2.0,
+      "parent": "DeferredTaxAssetsGross",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxAssetsGross",
+      "order": 2.0,
+      "parent": "DeferredTaxAssetsNet",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxAssetsValuationAllowance",
+      "order": 1.0,
+      "parent": "DeferredTaxAssetsNet",
+      "weight": -1.0
+    },
+    {
+      "child": "DeferredIncomeTaxLiabilities",
+      "order": 2.0,
+      "parent": "DeferredTaxLiabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredTaxAssetsNet",
+      "order": 1.0,
+      "parent": "DeferredTaxLiabilities",
+      "weight": -1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationInterestExpense",
+      "order": 2.0,
+      "parent": "DiscontinuedOperationIncomeLossFromDiscontinuedOperationBeforeIncomeTax",
+      "weight": -1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationOperatingIncomeLoss",
+      "order": 1.0,
+      "parent": "DiscontinuedOperationIncomeLossFromDiscontinuedOperationBeforeIncomeTax",
+      "weight": 1.0
+    },
+    {
+      "child": "DiscontinuedOperationGainLossFromDisposalOfDiscontinuedOperationBeforeIncomeTax",
+      "order": 4.0,
+      "parent": "DisposalGroupIncludingDiscontinuedOperationOperatingIncomeLoss",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationCostsOfGoodsSold",
+      "order": 2.0,
+      "parent": "DisposalGroupIncludingDiscontinuedOperationOperatingIncomeLoss",
+      "weight": -1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationGeneralAndAdministrativeExpense",
+      "order": 3.0,
+      "parent": "DisposalGroupIncludingDiscontinuedOperationOperatingIncomeLoss",
+      "weight": -1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationRevenue",
+      "order": 1.0,
+      "parent": "DisposalGroupIncludingDiscontinuedOperationOperatingIncomeLoss",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromContinuingOperationsPerBasicShare",
+      "order": 1.0,
+      "parent": "EarningsPerShareBasic",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromDiscontinuedOperationsNetOfTaxPerBasicShare",
+      "order": 2.0,
+      "parent": "EarningsPerShareBasic",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromContinuingOperationsPerDilutedShare",
+      "order": 1.0,
+      "parent": "EarningsPerShareDiluted",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromDiscontinuedOperationsNetOfTaxPerDilutedShare",
+      "order": 2.0,
+      "parent": "EarningsPerShareDiluted",
+      "weight": 1.0
+    },
+    {
+      "child": "EffectiveIncomeTaxRateReconciliationAtFederalStatutoryIncomeTaxRate",
+      "order": 4.0,
+      "parent": "EffectiveIncomeTaxRateContinuingOperations",
+      "weight": 1.0
+    },
+    {
+      "child": "EffectiveIncomeTaxRateReconciliationChangeInDeferredTaxAssetsValuationAllowance",
+      "order": 1.0,
+      "parent": "EffectiveIncomeTaxRateContinuingOperations",
+      "weight": 1.0
+    },
+    {
+      "child": "EffectiveIncomeTaxRateReconciliationNondeductibleExpenseShareBasedCompensationCost",
+      "order": 2.0,
+      "parent": "EffectiveIncomeTaxRateContinuingOperations",
+      "weight": 1.0
+    },
+    {
+      "child": "EffectiveIncomeTaxRateReconciliationOtherReconcilingItemsPercent",
+      "order": 3.0,
+      "parent": "EffectiveIncomeTaxRateContinuingOperations",
+      "weight": 1.0
+    },
+    {
+      "child": "EffectiveIncomeTaxRateReconciliationStateAndLocalIncomeTaxes",
+      "order": 6.0,
+      "parent": "EffectiveIncomeTaxRateContinuingOperations",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityCurrent",
+      "order": 2.0,
+      "parent": "FinanceLeaseLiability",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityNoncurrent",
+      "order": 1.0,
+      "parent": "FinanceLeaseLiability",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiability",
+      "order": 2.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityCurrent",
+      "order": 3.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityNoncurrent",
+      "order": 1.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityPaymentsDueAfterYearFive",
+      "order": 6.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityPaymentsDueNextTwelveMonths",
+      "order": 4.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityPaymentsDueYearFive",
+      "order": 5.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityPaymentsDueYearFour",
+      "order": 2.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityPaymentsDueYearThree",
+      "order": 1.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityPaymentsDueYearTwo",
+      "order": 3.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityUndiscountedExcessAmount",
+      "order": 1.0,
+      "parent": "FinanceLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "FairValueAdjustmentOfWarrants",
+      "order": 8.0,
+      "parent": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "weight": -1.0
+    },
+    {
+      "child": "GainsLossesOnExtinguishmentOfDebt",
+      "order": 6.0,
+      "parent": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "weight": 1.0
+    },
+    {
+      "child": "InterestExpenseNonoperating",
+      "order": 6.0,
+      "parent": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "weight": -1.0
+    },
+    {
+      "child": "OperatingIncomeLoss",
+      "order": 1.0,
+      "parent": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "weight": 1.0
+    },
+    {
+      "child": "OtherNonoperatingIncomeExpense",
+      "order": 2.0,
+      "parent": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "order": 1.0,
+      "parent": "IncomeLossFromContinuingOperationsIncludingPortionAttributableToNoncontrollingInterest",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeTaxExpenseBenefit",
+      "order": 2.0,
+      "parent": "IncomeLossFromContinuingOperationsIncludingPortionAttributableToNoncontrollingInterest",
+      "weight": -1.0
+    },
+    {
+      "child": "DiscontinuedOperationIncomeLossFromDiscontinuedOperationBeforeIncomeTax",
+      "order": 1.0,
+      "parent": "IncomeLossFromDiscontinuedOperationsNetOfTax",
+      "weight": 1.0
+    },
+    {
+      "child": "DiscontinuedOperationTaxEffectOfDiscontinuedOperation",
+      "order": 2.0,
+      "parent": "IncomeLossFromDiscontinuedOperationsNetOfTax",
+      "weight": -1.0
+    },
+    {
+      "child": "CurrentIncomeTaxExpenseBenefit",
+      "order": 1.0,
+      "parent": "IncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "DeferredIncomeTaxExpenseBenefit",
+      "order": 2.0,
+      "parent": "IncomeTaxExpenseBenefit",
+      "weight": 1.0
+    },
+    {
+      "child": "AmortizationOfFinancingCostsAndDiscounts",
+      "order": 2.0,
+      "parent": "InterestCostsIncurred",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseInterestExpense",
+      "order": 3.0,
+      "parent": "InterestCostsIncurred",
+      "weight": 1.0
+    },
+    {
+      "child": "InterestExpenseDebt",
+      "order": 1.0,
+      "parent": "InterestCostsIncurred",
+      "weight": 1.0
+    },
+    {
+      "child": "InterestCostsCapitalizedAdjustment",
+      "order": 2.0,
+      "parent": "InterestExpenseNonoperating",
+      "weight": -1.0
+    },
+    {
+      "child": "InterestCostsIncurred",
+      "order": 1.0,
+      "parent": "InterestExpenseNonoperating",
+      "weight": 1.0
+    },
+    {
+      "child": "SubleaseIncome",
+      "order": 4.0,
+      "parent": "LeaseCost",
+      "weight": -1.0
+    },
+    {
+      "child": "VariableLeaseCost",
+      "order": 3.0,
+      "parent": "LeaseCost",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityCurrent",
+      "order": 1.0,
+      "parent": "LeaseLiabilityCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityNoncurrent",
+      "order": 1.0,
+      "parent": "LeaseLiabilityNoncurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "LesseeOperatingLeaseLiabilityPaymentsDueAfterYearFive",
+      "order": 3.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "LesseeOperatingLeaseLiabilityPaymentsDueNextTwelveMonths",
+      "order": 5.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "LesseeOperatingLeaseLiabilityPaymentsDueYearFive",
+      "order": 1.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "LesseeOperatingLeaseLiabilityPaymentsDueYearFour",
+      "order": 6.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "LesseeOperatingLeaseLiabilityPaymentsDueYearThree",
+      "order": 2.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "LesseeOperatingLeaseLiabilityPaymentsDueYearTwo",
+      "order": 4.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "LesseeOperatingLeaseLiabilityUndiscountedExcessAmount",
+      "order": 2.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "OperatingLeaseLiability",
+      "order": 1.0,
+      "parent": "LesseeOperatingLeaseLiabilityPaymentsDue",
+      "weight": 1.0
+    },
+    {
+      "child": "LessorOperatingLeasePaymentsToBeReceivedFiveYears",
+      "order": 5.0,
+      "parent": "LessorOperatingLeasePaymentsToBeReceived",
+      "weight": 1.0
+    },
+    {
+      "child": "LessorOperatingLeasePaymentsToBeReceivedFourYears",
+      "order": 4.0,
+      "parent": "LessorOperatingLeasePaymentsToBeReceived",
+      "weight": 1.0
+    },
+    {
+      "child": "LessorOperatingLeasePaymentsToBeReceivedNextTwelveMonths",
+      "order": 1.0,
+      "parent": "LessorOperatingLeasePaymentsToBeReceived",
+      "weight": 1.0
+    },
+    {
+      "child": "LessorOperatingLeasePaymentsToBeReceivedThereafter",
+      "order": 6.0,
+      "parent": "LessorOperatingLeasePaymentsToBeReceived",
+      "weight": 1.0
+    },
+    {
+      "child": "LessorOperatingLeasePaymentsToBeReceivedThreeYears",
+      "order": 3.0,
+      "parent": "LessorOperatingLeasePaymentsToBeReceived",
+      "weight": 1.0
+    },
+    {
+      "child": "LessorOperatingLeasePaymentsToBeReceivedTwoYears",
+      "order": 2.0,
+      "parent": "LessorOperatingLeasePaymentsToBeReceived",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityNoncurrent",
+      "order": 1.0,
+      "parent": "Liabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "LiabilitiesCurrent",
+      "order": 3.0,
+      "parent": "Liabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermNotesPayable",
+      "order": 4.0,
+      "parent": "Liabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "OperatingLeaseLiabilityNoncurrent",
+      "order": 2.0,
+      "parent": "Liabilities",
+      "weight": 1.0
+    },
+    {
+      "child": "CommitmentsAndContingencies",
+      "order": 1.0,
+      "parent": "LiabilitiesAndStockholdersEquity",
+      "weight": 1.0
+    },
+    {
+      "child": "Liabilities",
+      "order": 2.0,
+      "parent": "LiabilitiesAndStockholdersEquity",
+      "weight": 1.0
+    },
+    {
+      "child": "StockholdersEquity",
+      "order": 4.0,
+      "parent": "LiabilitiesAndStockholdersEquity",
+      "weight": 1.0
+    },
+    {
+      "child": "TemporaryEquityCarryingAmountAttributableToParent",
+      "order": 3.0,
+      "parent": "LiabilitiesAndStockholdersEquity",
+      "weight": 1.0
+    },
+    {
+      "child": "AccountsPayableCurrent",
+      "order": 6.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "AccruedLiabilitiesCurrent",
+      "order": 7.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "ContractWithCustomerLiabilityCurrent",
+      "order": 3.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeaseLiabilityCurrent",
+      "order": 2.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "LiabilitiesOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "order": 11.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "NotesPayableCurrent",
+      "order": 9.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "NotesPayableFairValueDisclosure",
+      "order": 5.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "OperatingLeaseLiabilityCurrent",
+      "order": 8.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "OtherLiabilitiesCurrent",
+      "order": 4.0,
+      "parent": "LiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationAccountsPayableCurrent",
+      "order": 1.0,
+      "parent": "LiabilitiesOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationAccruedLiabilitiesCurrent",
+      "order": 2.0,
+      "parent": "LiabilitiesOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "DisposalGroupIncludingDiscontinuedOperationDeferredRevenueCurrent",
+      "order": 5.0,
+      "parent": "LiabilitiesOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive",
+      "order": 6.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+      "order": 4.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive",
+      "order": 2.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour",
+      "order": 5.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+      "order": 1.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+      "order": 3.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturitiesRepaymentsOfPrincipalRemainderOfFiscalYear",
+      "order": 1.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "LongTermDebtMaturityAfterYearFour",
+      "order": 4.0,
+      "parent": "LongTermDebt",
+      "weight": 1.0
+    },
+    {
+      "child": "FinanceLeasePrincipalPayments",
+      "order": 1.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsForDerivativeInstrumentFinancingActivities",
+      "order": 17.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsForRepurchaseOfCommonStock",
+      "order": 14.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsOfDividendsPreferredStockAndPreferenceStock",
+      "order": 12.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsOfFinancingCosts",
+      "order": 6.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsOfStockIssuanceCosts",
+      "order": 9.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "order": 7.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "ProceedsFromConvertibleDebt",
+      "order": 15.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "ProceedsFromIssuanceOfCommonStock",
+      "order": 8.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "ProceedsFromIssuanceOfMediumTermNotes",
+      "order": 2.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "ProceedsFromIssuanceOfPreferredStockAndPreferenceStock",
+      "order": 10.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "ProceedsFromMinorityShareholders",
+      "order": 18.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "ProceedsFromRelatedPartyDebt",
+      "order": 3.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "RepaymentsOfMediumTermNotes",
+      "order": 4.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "RepaymentsOfRelatedPartyDebt",
+      "order": 5.0,
+      "parent": "NetCashProvidedByUsedInFinancingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsToAcquireInvestments",
+      "order": 4.0,
+      "parent": "NetCashProvidedByUsedInInvestingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "PaymentsToAcquireProductiveAssets",
+      "order": 1.0,
+      "parent": "NetCashProvidedByUsedInInvestingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "ProceedsFromSaleOfProductiveAssets",
+      "order": 2.0,
+      "parent": "NetCashProvidedByUsedInInvestingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "AmortizationOfFinancingCosts",
+      "order": 8.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "AssetsDisposedOfByMethodOtherThanSaleInPeriodOfDispositionGainLossOnDisposition1",
+      "order": 14.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "DeferredIncomeTaxExpenseBenefit",
+      "order": 5.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "DiscontinuedOperationGainLossFromDisposalOfDiscontinuedOperationBeforeIncomeTax",
+      "order": 9.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "FairValueAdjustmentOfWarrants",
+      "order": 13.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "GainLossRelatedToLitigationSettlement",
+      "order": 7.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "GainsLossesOnExtinguishmentOfDebt",
+      "order": 6.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "IncreaseDecreaseInAccountsPayable",
+      "order": 19.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "IncreaseDecreaseInAccountsReceivable",
+      "order": 15.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "IncreaseDecreaseInAccruedLiabilities",
+      "order": 20.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "IncreaseDecreaseInContractWithCustomerLiability",
+      "order": 18.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "IncreaseDecreaseInOtherOperatingAssets",
+      "order": 23.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets",
+      "order": 16.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": -1.0
+    },
+    {
+      "child": "OperatingLeaseExpense",
+      "order": 4.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "ProfitLoss",
+      "order": 1.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "ShareBasedCompensation",
+      "order": 3.0,
+      "parent": "NetCashProvidedByUsedInOperatingActivities",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromContinuingOperations",
+      "order": 1.0,
+      "parent": "NetIncomeLossAvailableToCommonStockholdersBasic",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromDiscontinuedOperationsNetOfTaxAttributableToReportingEntity",
+      "order": 2.0,
+      "parent": "NetIncomeLossAvailableToCommonStockholdersBasic",
+      "weight": 1.0
+    },
+    {
+      "child": "NetIncomeLossAttributableToNoncontrollingInterest",
+      "order": 2.0,
+      "parent": "NetIncomeLossAvailableToCommonStockholdersBasic",
+      "weight": -1.0
+    },
+    {
+      "child": "PreferredStockDividendsIncomeStatementImpact",
+      "order": 3.0,
+      "parent": "NetIncomeLossAvailableToCommonStockholdersBasic",
+      "weight": -1.0
+    },
+    {
+      "child": "ProfitLoss",
+      "order": 1.0,
+      "parent": "NetIncomeLossAvailableToCommonStockholdersBasic",
+      "weight": 1.0
+    },
+    {
+      "child": "CostsAndExpenses",
+      "order": 1.0,
+      "parent": "OperatingIncomeLoss",
+      "weight": -1.0
+    },
+    {
+      "child": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "order": 2.0,
+      "parent": "OperatingIncomeLoss",
+      "weight": 1.0
+    },
+    {
+      "child": "OperatingLeaseLiabilityCurrent",
+      "order": 2.0,
+      "parent": "OperatingLeaseLiability",
+      "weight": 1.0
+    },
+    {
+      "child": "OperatingLeaseLiabilityNoncurrent",
+      "order": 1.0,
+      "parent": "OperatingLeaseLiability",
+      "weight": 1.0
+    },
+    {
+      "child": "OtherAssetsMiscellaneous",
+      "order": 6.0,
+      "parent": "OtherAssets",
+      "weight": 1.0
+    },
+    {
+      "child": "OtherInvestments",
+      "order": 5.0,
+      "parent": "OtherAssets",
+      "weight": 1.0
+    },
+    {
+      "child": "OtherSundryLiabilitiesCurrent",
+      "order": 2.0,
+      "parent": "OtherLiabilitiesCurrent",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromContinuingOperationsIncludingPortionAttributableToNoncontrollingInterest",
+      "order": 1.0,
+      "parent": "ProfitLoss",
+      "weight": 1.0
+    },
+    {
+      "child": "IncomeLossFromDiscontinuedOperationsNetOfTax",
+      "order": 2.0,
+      "parent": "ProfitLoss",
+      "weight": 1.0
+    },
+    {
+      "child": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+      "order": 1.0,
+      "parent": "PropertyPlantAndEquipmentNet",
+      "weight": -1.0
+    },
+    {
+      "child": "PropertyPlantAndEquipmentGross",
+      "order": 2.0,
+      "parent": "PropertyPlantAndEquipmentNet",
+      "weight": 1.0
+    },
+    {
+      "child": "AllocatedShareBasedCompensationExpense",
+      "order": 1.0,
+      "parent": "SharebasedCompensationArrangementBySharebasedPaymentAwardCompensationCost1",
+      "weight": 1.0
+    },
+    {
+      "child": "EmployeeServiceShareBasedCompensationAllocationOfRecognizedPeriodCostsCapitalizedAmount",
+      "order": 2.0,
+      "parent": "SharebasedCompensationArrangementBySharebasedPaymentAwardCompensationCost1",
+      "weight": 1.0
+    },
+    {
+      "child": "AdditionalPaidInCapital",
+      "order": 3.0,
+      "parent": "StockholdersEquity",
+      "weight": 1.0
+    },
+    {
+      "child": "CommonStockValue",
+      "order": 2.0,
+      "parent": "StockholdersEquity",
+      "weight": 1.0
+    },
+    {
+      "child": "RetainedEarningsAccumulatedDeficit",
+      "order": 1.0,
+      "parent": "StockholdersEquity",
+      "weight": 1.0
+    },
+    {
+      "child": "TreasuryStockCommonValue",
+      "order": 4.0,
+      "parent": "StockholdersEquity",
+      "weight": -1.0
+    }
+  ],
+  "concepts": [
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "B. Riley Loan and Security Agreement [Member]",
+      "name": "BRileyLoanAndSecurityAgreementMember",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "ConvertibleDebt",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "ConvertibleDebtNoncurrent",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "DebtCurrent",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Debt Instrument, Interest Rate, Buy Down, New Percentage",
+      "name": "DebtInstrumentInterestRateBuyDownNewPercentage",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Debt Instrument, Interest Rate, Buy Down Term",
+      "name": "DebtInstrumentInterestRateBuyDownTerm",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "DebtInstrumentLineItems",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Debt Instrument, Loan Advances, Installment Maximum",
+      "name": "DebtInstrumentLoanAdvancesInstallmentMaximum",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Debt Instrument, Loan Advances, Number of Installments",
+      "name": "DebtInstrumentLoanAdvancesNumberOfInstallments",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Debt Instrument, Loan Advances To Date",
+      "name": "DebtInstrumentLoanAdvancesToDate",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Debt Instrument, Outstanding Balance, Fee, Percent",
+      "name": "DebtInstrumentOutstandingBalanceFeePercent",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Debt Instrument, Term Fee Amount",
+      "name": "DebtInstrumentTermFeeAmount",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Ellendale Loan Agreement [Member]",
+      "name": "EllendaleLoanAgreementMember",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230228"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "FinanceLeaseLiability",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "FinanceLeaseLiabilityCurrent",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "FinanceLeaseLiabilityNoncurrent",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "LinesOfCreditCurrent",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebt",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtCurrent",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": true,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Long-Term Debt, Maturity, after Year Four",
+      "name": "LongTermDebtMaturityAfterYearFour",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20220831"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermDebtNoncurrent",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "LongTermNotesPayable",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": true,
+      "label": null,
+      "name": "NotesPayable",
+      "namespace_type": "STANDARD",
+      "namespace_uri": "http://fasb.org/us-gaap/2025"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Purchase Obligation, Received and Deployed",
+      "name": "PurchaseObligationReceivedAndDeployed",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Purchase Obligation, Units",
+      "name": "PurchaseObligationUnits",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Right-of-Use Asset Obtained in Exchange for Finance Lease Liability, Units",
+      "name": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiabilityUnits",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Starion Loan and Vantage Garden City Loan Agreements [Member]",
+      "name": "StarionLoanAndVantageGardenCityLoanAgreementsMember",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Stock Issued During Period, Shares, Issued For Debt Extinguishment",
+      "name": "StockIssuedDuringPeriodSharesIssuedForDebtExtinguishment",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20220831"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Stock Issued During Period, Value, Issued For Debt Extinguishment",
+      "name": "StockIssuedDuringPeriodValueIssuedForDebtExtinguishment",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20220831"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Temporary Equity, Stock Issued During Period, Shares, Conversion of Convertible Securities",
+      "name": "TemporaryEquityStockIssuedDuringPeriodSharesConversionOfConvertibleSecurities",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Temporary Equity, Stock Issued During Period, Value, Conversion of Convertible Securities",
+      "name": "TemporaryEquityStockIssuedDuringPeriodValueConversionOfConvertibleSecurities",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20230531"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "The Loan Agreement [Member]",
+      "name": "TheLoanAgreementMember",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20220831"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "The Starion Loan Agreement [Member]",
+      "name": "TheStarionLoanAgreementMember",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Vantage Bank Texas (VBT) Promissory Note [Member]",
+      "name": "VantageBankTexasVBTPromissoryNoteMember",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20220831"
+    },
+    {
+      "is_component": false,
+      "is_total": false,
+      "label": "Vantage Garden City Loan Agreement [Member]",
+      "name": "VantageGardenCityLoanAgreementMember",
+      "namespace_type": "COMPANY",
+      "namespace_uri": "http://appliedblockchaininc.com/20221130"
+    }
+  ],
+  "content_hash": "c0408ae69137e171",
+  "dimension_arcs": [
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201602CumulativeEffectPeriodOfAdoptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201602RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201811ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201811RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201812ModifiedRetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201812RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201815ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201815RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201820ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201820RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201901CumulativeEffectPeriodOfAdoptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201901RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201912CumulativeEffectPeriodOfAdoptionForFranchiseTaxBasedOnIncomeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate201912RetrospectiveForFranchiseTaxBasedOnIncomeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202006CumulativeEffectPeriodOfAdoptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202006RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202010CumulativeEffectPeriodOfAdoptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202010RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202101ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202101RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202105ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202105RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202110ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202110RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202201ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202201RetrospectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202202CumulativeEffectPeriodOfAdoptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AccountingStandardsUpdateTransitionMethodAbstract",
+      "member": "AccountingStandardsUpdate202202ProspectiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AdjustmentsForErrorCorrectionDomain",
+      "member": "ErrorCorrectionOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "DepreciationDepletionAndAmortization",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "GainLossOnExtinguishmentOfAccountsPayable",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "GainsLossesOnExtinguishmentOfDebt",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "OperatingLeaseExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "OtherNoncashExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "ShareBasedCompensation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AmericasMember",
+      "member": "CentralAmericaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AmericasMember",
+      "member": "NorthAmericaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AmericasMember",
+      "member": "SouthAmericaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "AccruedInvestmentIncomeReceivable",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "Assets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "AssetsCurrentAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "CashAndCashEquivalentsAtCarryingValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "DerivativeAssets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "DueFromRelatedParties",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "FinanceLeaseRightOfUseAsset",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "Goodwill",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "IncomeTaxReceivable",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "OperatingLeaseRightOfUseAsset",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "OtherAssets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "PrepaidExpenseAndOtherAssets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsAbstract",
+      "member": "PropertyPlantAndEquipmentNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsCurrentAbstract",
+      "member": "AccountsReceivableNetCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsCurrentAbstract",
+      "member": "AssetsCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsCurrentAbstract",
+      "member": "CashAndCashEquivalentsAtCarryingValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsCurrentAbstract",
+      "member": "OtherAssetsCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsCurrentAbstract",
+      "member": "PrepaidExpenseAndOtherAssetsCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsNoncurrentAbstract",
+      "member": "OtherAssetsNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AssetsNoncurrentAbstract",
+      "member": "PrepaidExpenseAndOtherAssetsNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "AwardTypeAxis",
+      "member": "ShareBasedCompensationArrangementsByShareBasedPaymentAwardAwardTypeAndPlanNameDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "BankingMember",
+      "member": "BankServicingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "BankingMember",
+      "member": "CreditAndDebitCardMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "BankingMember",
+      "member": "DepositAccountMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "BankingMember",
+      "member": "GuaranteesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "BankingMember",
+      "member": "MortgageBankingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CashFlowNoncashInvestingAndFinancingActivitiesDisclosureAbstract",
+      "member": "CapitalExpendituresIncurredButNotYetPaid",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CashFlowNoncashInvestingAndFinancingActivitiesDisclosureAbstract",
+      "member": "DividendsPreferredStockPaidinkind",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CashFlowNoncashInvestingAndFinancingActivitiesDisclosureAbstract",
+      "member": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiability",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CashFlowNoncashInvestingAndFinancingActivitiesDisclosureAbstract",
+      "member": "RightOfUseAssetObtainedInExchangeForOperatingLeaseLiability",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CededCreditRiskReinsurerDomain",
+      "member": "OtherReinsurerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ChangeInAccountingPrincipleMember",
+      "member": "ChangeInAccountingPrincipleOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ChangeInValuationTechniqueAbstract",
+      "member": "ChangeInValuationTechniqueReasonCurrentAppraisalUnobtainableMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ChangeInValuationTechniqueAbstract",
+      "member": "ChangeInValuationTechniqueReasonInactiveMarketMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "CommonStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "ConvertibleCommonStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "PreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "SeriesAAndBPreferredStockMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "SeriesAPreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "SeriesBPreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "SeriesCAndDPreferredStockMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "SeriesCPreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockDomain",
+      "member": "SeriesDPreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockLineItems",
+      "member": "ContractualObligation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockLineItems",
+      "member": "HostingArrangementServiceContractTerm",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ClassOfStockLineItems",
+      "member": "LineOfCreditFacilityMaximumBorrowingCapacity",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockLineItems",
+      "member": "LossContingencyEstimateOfPossibleLoss",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ClassOfStockLineItems",
+      "member": "PurchaseObligationUnits",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "CollateralDomain",
+      "member": "CollateralPledgedMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CollateralPledgedMember",
+      "member": "AutomobilesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CollateralPledgedMember",
+      "member": "EquipmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CollateralPledgedMember",
+      "member": "EquitySecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CollateralPledgedMember",
+      "member": "GovernmentGuaranteedCollateralMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CollateralPledgedMember",
+      "member": "RealEstateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CollectiveBargainingArrangementDomain",
+      "member": "CollectiveBargainingArrangementOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CommodityContractMember",
+      "member": "CommodityOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ConcentrationRiskBenchmarkDomain",
+      "member": "SalesRevenueNetMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ConcentrationRiskByBenchmarkAxis",
+      "member": "ConcentrationRiskBenchmarkDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ConcentrationRiskByTypeAxis",
+      "member": "ConcentrationRiskTypeDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ConcentrationRiskLineItems",
+      "member": "ConcentrationRiskPercentage1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ConcentrationRiskTypeDomain",
+      "member": "CustomerConcentrationRiskMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ConstructionMember",
+      "member": "GeneralContractorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ConstructionMember",
+      "member": "HomeBuildingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ContractWithCustomerBasisOfPricingDomain",
+      "member": "FixedPriceContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ContractWithCustomerBasisOfPricingDomain",
+      "member": "TimeAndMaterialsContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ContractWithCustomerDurationDomain",
+      "member": "LongTermContractWithCustomerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ContractWithCustomerDurationDomain",
+      "member": "ShortTermContractWithCustomerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ContractWithCustomerSalesChannelDomain",
+      "member": "SalesChannelDirectlyToConsumerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ContractWithCustomerSalesChannelDomain",
+      "member": "SalesChannelThroughIntermediaryMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CounterpartyNameAxis",
+      "member": "RepurchaseAgreementCounterpartyNameDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CreditAndDebitCardMember",
+      "member": "CreditCardMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CreditAndDebitCardMember",
+      "member": "DebitCardMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CreditCardMember",
+      "member": "CreditCardMerchantDiscountMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CreditFacilityAxis",
+      "member": "CreditFacilityDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CreditFacilityDomain",
+      "member": "LetterOfCreditMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CreditQualityIndicatorUpdatedAbstract",
+      "member": "CreditQualityIndicatorUpdatedAnnuallyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CreditQualityIndicatorUpdatedAbstract",
+      "member": "CreditQualityIndicatorUpdatedQuarterlyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "CryptoAssetDomain",
+      "member": "CryptoAssetOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentAxis",
+      "member": "DebtInstrumentNameDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentConvertibleSettlementMethodAbstract",
+      "member": "CashSettlementMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentConvertibleSettlementMethodAbstract",
+      "member": "CombinationOfCashAndShareSettlementMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentConvertibleSettlementMethodAbstract",
+      "member": "ShareSettlementMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentCarryingAmount",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentFaceAmount",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentFeeAmount",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentInterestRateBuyDownNewPercentage",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentInterestRateBuyDownTerm",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentInterestRateEffectivePercentage",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentInterestRateStatedPercentage",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentLoanAdvancesInstallmentMaximum",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentLoanAdvancesNumberOfInstallments",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentLoanAdvancesToDate",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentOutstandingBalanceFeePercent",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentTerm",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DebtInstrumentTermFeeAmount",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "DeferredFinanceCostsNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LineOfCreditFacilityMaximumBorrowingCapacity",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebt",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturitiesRepaymentsOfPrincipalAfterYearFive",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturitiesRepaymentsOfPrincipalInNextTwelveMonths",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFive",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearFour",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearThree",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturitiesRepaymentsOfPrincipalInYearTwo",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturitiesRepaymentsOfPrincipalRemainderOfFiscalYear",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtMaturityAfterYearFour",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentLineItems",
+      "member": "LongTermDebtNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "BRileyLoanAndSecurityAgreementMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "EllendaleLoanAgreementMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "FrostBankLetterOfCreditMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "JamestownStutsmanDevelopmentCorporationInterestBuyDownMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "StarionLoanAndVantageGardenCityLoanAgreementsMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "TheLoanAgreementMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "TheStarionLoanAgreementMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "VantageBankTexasVBTPromissoryNoteMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtInstrumentNameDomain",
+      "member": "VantageGardenCityLoanAgreementMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DebtSecuritiesAvailableForSaleCostOfSecuritySoldMethodAbstract",
+      "member": "DebtSecuritiesAvailableForSaleCostOfSecuritySoldOrTransferredMethodAverageCostMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtSecuritiesAvailableForSaleCostOfSecuritySoldMethodAbstract",
+      "member": "DebtSecuritiesAvailableForSaleCostOfSecuritySoldOrTransferredMethodSpecificIdentificationMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtSecuritiesMaturityAllocationDomain",
+      "member": "DebtSecuritiesMaturityAllocationAverageRemainingLifeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtSecuritiesMaturityAllocationDomain",
+      "member": "DebtSecuritiesMaturityAllocationContractualMaturityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DebtSecuritiesMaturityAllocationDomain",
+      "member": "DebtSecuritiesMaturityAllocationExpectedMaturityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DecliningBalanceDepreciationMethodMember",
+      "member": "DecliningBalanceDepreciationMethod20PercentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DecliningBalanceDepreciationMethodMember",
+      "member": "DecliningBalanceDepreciationMethod30PercentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DepreciationMethodDomain",
+      "member": "DecliningBalanceDepreciationMethodMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DepreciationMethodDomain",
+      "member": "NoDepreciationMethodMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DepreciationMethodDomain",
+      "member": "StraightLineDepreciationMethodMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DepreciationMethodDomain",
+      "member": "UnitsOfProductionDepreciationMethodMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "CoalContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "CommodityContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "CreditRiskContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "CrossCurrencyInterestRateContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "EmbeddedDerivativeFinancialInstrumentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "EnergyRelatedDerivativeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "EquityContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "ForeignExchangeContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "InterestRateContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "OtherContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeContractTypeDomain",
+      "member": "TreasuryLockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "CapitalSupportAgreementMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "CreditDefaultSwaptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "EnergyRelatedDerivativeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "ExchangeTradedOptionsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "ForeignExchangeForwardMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "ForwardContractsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "FutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "InterestRateSwaptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "OptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "OptionOnSecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "SwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "TotalReturnSwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "VarianceSwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeMember",
+      "member": "WarrantMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeUnderlyingInvestmentBasketOrIndexAbstract",
+      "member": "DowJonesIndustrialAverageMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeUnderlyingInvestmentBasketOrIndexAbstract",
+      "member": "NasdaqCompositeIndexMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DerivativeUnderlyingInvestmentBasketOrIndexAbstract",
+      "member": "StandardPoors500IndexMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DisposalGroupClassificationAxis",
+      "member": "DisposalGroupClassificationDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DisposalGroupClassificationDomain",
+      "member": "DiscontinuedOperationsHeldforsaleMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DisposalGroupsIncludingDiscontinuedOperationsNameDomain",
+      "member": "MiningSegmentMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "DistributionAndShareholderServiceMember",
+      "member": "DistributionServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "DistributionAndShareholderServiceMember",
+      "member": "ShareholderServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EMEAMember",
+      "member": "AfricaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EMEAMember",
+      "member": "EuropeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EMEAMember",
+      "member": "MiddleEastMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ElectricityMember",
+      "member": "ElectricDistributionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ElectricityMember",
+      "member": "ElectricTransmissionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ElectricityMember",
+      "member": "ElectricityGenerationMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ElectricityMember",
+      "member": "ElectricityPurchasedMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ElectricityMember",
+      "member": "ElectricityUsRegulatedMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EnergyCommoditiesAndServiceMember",
+      "member": "EnergyServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EntityDomain",
+      "member": "GMRLimitedMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "EntityWideRevenueMajorCustomerLineItems",
+      "member": "RevenueRemainingPerformanceObligation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EntityWideRevenueMajorCustomerLineItems",
+      "member": "RevenueRemainingPerformanceObligationExpectedTimingOfSatisfactionPeriod1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquityComponentDomain",
+      "member": "NoncontrollingInterestMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquityComponentDomain",
+      "member": "ParentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquityContractMember",
+      "member": "EquitySwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquityContractMember",
+      "member": "StockOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquityMethodInvesteeNameDomain",
+      "member": "GMRLimitedMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "EquityMethodInvesteeNameDomain",
+      "member": "HighlandDigitalHoldingsLLCMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "AerospaceSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "AgriculturalSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "AutomotiveSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "ChemicalsSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "CommercialAndIndustrialSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "ConstructionSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "ConsumerSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "ContainerAndPackagingSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "EnergySectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "EntertainmentSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "FinancialServicesSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "FoodAndBeverageSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "GovernmentSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "HealthcareSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "InsuranceSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "RealEstateSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "RetailSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "TechnologySectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesIndustryMember",
+      "member": "TransportationSectorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesMember",
+      "member": "CommonStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesMember",
+      "member": "PreferredNonConvertibleStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesMember",
+      "member": "PreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesMember",
+      "member": "RightsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "EquitySecuritiesMember",
+      "member": "WarrantMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueInputsLevel12And3Member",
+      "member": "FairValueInputsLevel1Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueInputsLevel12And3Member",
+      "member": "FairValueInputsLevel2Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueInputsLevel12And3Member",
+      "member": "FairValueInputsLevel3Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueMeasurementsFairValueHierarchyDomain",
+      "member": "FairValueInputsLevel12And3Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueMeasurementsFairValueHierarchyDomain",
+      "member": "FairValueMeasuredAtNetAssetValuePerShareMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueOptionOtherEligibleItemsMember",
+      "member": "FirmCommitmentNotRecognizedAtInceptionFairValueOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueOptionOtherEligibleItemsMember",
+      "member": "InsuranceContractRightsAndObligationsFairValueOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueOptionOtherEligibleItemsMember",
+      "member": "SeparatedHostFinancialInstrumentFairValueOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueOptionOtherEligibleItemsMember",
+      "member": "WarrantyRightsAndObligationsFairValueOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FairValueOptionOtherEligibleItemsMember",
+      "member": "WrittenLoanCommitmentFairValueOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinanceLeaseExpenseAbstract",
+      "member": "FinanceLeaseCost",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "FinanceLeaseExpenseAbstract",
+      "member": "FinanceLeaseInterestExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinanceLeaseExpenseAbstract",
+      "member": "FinanceLeaseRightOfUseAssetAmortization",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinanceLeaseExpenseAbstract",
+      "member": "VariableLeaseCost",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinancialServiceMember",
+      "member": "BankingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinancialServiceMember",
+      "member": "ClearingServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinancialServiceMember",
+      "member": "CorrespondentClearingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinancialServiceMember",
+      "member": "FiduciaryAndTrustMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinancialServiceMember",
+      "member": "FinancialServiceOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinancialServiceMember",
+      "member": "InvestmentAdvisoryManagementAndAdministrativeServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FinancialServiceMember",
+      "member": "TransferAgentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedAnnuityMember",
+      "member": "DeferredFixedAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedAnnuityMember",
+      "member": "ImmediateFixedAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "AdjustableRateLoansMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "AssetBackedSecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "CertificatesOfDepositMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "CollateralizedMortgageObligationsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "CommodityIndexLinkedNotesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "ConvertibleDebtSecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "CorporateBondSecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "CorporateDebtSecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "CorporateNoteSecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "EuroDollarCertificatesOfDepositMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "JuniorLoansMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "JuniorNotesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "JuniorSubordinatedDebtMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "LoanParticipationsAndAssignmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "RepurchaseAgreementsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "SeniorLoansMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "SeniorNotesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "SeniorSubordinatedLoansMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "SeniorSubordinatedNotesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "SovereignDebtSecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "SubordinatedDebtMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "UnitrancheDebtMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FixedIncomeInvestmentsMember",
+      "member": "VariableRateDemandObligationMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ForeignExchangeContractMember",
+      "member": "CurrencySwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ForeignExchangeContractMember",
+      "member": "EurodollarFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ForeignExchangeContractMember",
+      "member": "ForeignExchangeForwardMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ForeignExchangeContractMember",
+      "member": "ForeignExchangeFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ForeignExchangeContractMember",
+      "member": "ForeignExchangeOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FranchisorMember",
+      "member": "FranchiseMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FranchisorMember",
+      "member": "FranchisorOwnedOutletMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FundedPlanMember",
+      "member": "OverfundedPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FundedPlanMember",
+      "member": "UnderfundedPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FutureMember",
+      "member": "BondFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FutureMember",
+      "member": "DJIAIndexFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FutureMember",
+      "member": "EuriborFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FutureMember",
+      "member": "EurodollarFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FutureMember",
+      "member": "ForeignExchangeFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FutureMember",
+      "member": "NASDAQIndexFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "FutureMember",
+      "member": "SingleStockFutureMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "GeographicBasisAbstract",
+      "member": "GeographicBasisCorporateHeadquartersMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "GeographicBasisAbstract",
+      "member": "GeographicBasisCountryOfDomicileMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "GranteeStatusDomain",
+      "member": "ShareBasedPaymentArrangementEmployeeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "GranteeStatusDomain",
+      "member": "ShareBasedPaymentArrangementNonemployeeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HealthCareMember",
+      "member": "HealthCareOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HealthCareMember",
+      "member": "HealthCarePatientServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HealthCareMember",
+      "member": "HealthCarePremiumMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HealthCareMember",
+      "member": "HealthCareResidentServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HedgeFundsMember",
+      "member": "HedgeFundsEquityLongShortMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HedgeFundsMember",
+      "member": "HedgeFundsEquityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HedgeFundsMember",
+      "member": "HedgeFundsEventDrivenMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HedgeFundsMember",
+      "member": "HedgeFundsGlobalOpportunityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HedgeFundsMember",
+      "member": "HedgeFundsMultistrategyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HotelMember",
+      "member": "CasinoMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HotelMember",
+      "member": "FoodAndBeverageMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HotelMember",
+      "member": "HotelOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HotelMember",
+      "member": "HotelOwnedMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HotelMember",
+      "member": "OccupancyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "HotelMember",
+      "member": "RetailMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeApproachValuationTechniqueMember",
+      "member": "ValuationTechniqueDiscountedCashFlowMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeApproachValuationTechniqueMember",
+      "member": "ValuationTechniqueOptionPricingModelMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "AmortizationOfDeferredCharges",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "CostDirectLabor",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "CostOfGoodsAndServicesSold",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "CostOfRevenue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "CostsAndExpenses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanActuarialGainLossImmediateRecognitionAsComponentInNetPeriodicBenefitCostCredit",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanAmortizationOfGainsLosses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanAmortizationOfPriorServiceCostCredit",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanAmortizationOfTransitionAssetObligation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanExpectedReturnOnPlanAssets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanInterestCost",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanOtherCosts",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanRecognizedNetGainLossDueToCurtailments",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanRecognizedNetGainLossDueToSettlements1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DefinedBenefitPlanRecognizedNetGainLossDueToSettlementsAndCurtailments1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "DirectOperatingCosts",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "EmployeeBenefitsAndShareBasedCompensation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "EnvironmentalCostsRecognizedRecoveryCreditedToExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "EnvironmentalRemediationExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "EnvironmentalRemediationExpenseAfterRecovery",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "GeneralAndAdministrativeExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "InterestAndDebtExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "InterestExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "InterestExpenseOther",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "InterestIncomeExpenseNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "InterestIncomeExpenseNonoperatingNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "InterestIncomeOperating",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "InvestmentIncomeNonoperating",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "LaborAndRelatedExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "NetPeriodicDefinedBenefitsExpenseReversalOfExpenseExcludingServiceCostComponent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "NoninterestExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "NonoperatingGainsLosses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "NonoperatingIncomeExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OfficersCompensation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OperatingCostsAndExpenses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OperatingExpenses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OperatingIncomeLoss",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherAmortizationOfDeferredCharges",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherCostAndExpenseOperating",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherDepreciationAndAmortization",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherExpenses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherGeneralAndAdministrativeExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherGeneralExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherLaborRelatedExpenses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNoninterestExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonoperatingAssetRelatedIncome",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonoperatingExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonoperatingGainsLosses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonoperatingIncome",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonoperatingIncomeExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonrecurringExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonrecurringIncome",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherNonrecurringIncomeExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherOperatingIncome",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherSellingAndMarketingExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "OtherSellingGeneralAndAdministrativeExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "ResultsOfOperationsGeneralAndAdministrativeRelatedToOilAndGasProducingActivities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "Revenues",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "SalariesAndWages",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "SalariesWagesAndOfficersCompensation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "SellingAndMarketingExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "SellingExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "SellingGeneralAndAdministrativeExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "UtilitiesOperatingExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementAbstract",
+      "member": "UtilitiesOperatingExpenseMaintenanceOperationsAndOtherCostsAndExpenses",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsAxis",
+      "member": "DisposalGroupsIncludingDiscontinuedOperationsNameDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "AssetsOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "DiscontinuedOperationGainLossOnDisposalOfDiscontinuedOperationNetOfTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "DiscontinuedOperationGainLossOnReclassificationOfDiscontinuedOperationNetOfTax",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "DisposalGroupIncludingDiscontinuedOperationCostsOfGoodsSold",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "DisposalGroupIncludingDiscontinuedOperationExtinguishmentOfAccountsPayableGainLoss",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "DisposalGroupIncludingDiscontinuedOperationGrossProfitLoss",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "DisposalGroupIncludingDiscontinuedOperationIntangibleAssetsImpairment",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "DisposalGroupIncludingDiscontinuedOperationRevenueNetOfPoolFees",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncomeStatementBalanceSheetAndAdditionalDisclosuresByDisposalGroupsIncludingDiscontinuedOperationsLineItems",
+      "member": "IncomeLossFromDiscontinuedOperationsNetOfTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementLocationAxis",
+      "member": "IncomeStatementLocationDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementLocationDomain",
+      "member": "CostOfSalesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncomeStatementLocationDomain",
+      "member": "DepreciationAndAmortizationExpenseMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "DeferredIncomeTaxExpenseBenefit",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "IncreaseDecreaseInAccountsPayableAndAccruedLiabilities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "IncreaseDecreaseInAccountsReceivable",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "IncreaseDecreaseInContractWithCustomerLiability",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "IncreaseDecreaseInContractWithCustomerLiabilityCustomerDeposits",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "IncreaseDecreaseInLeaseAssetsAndLiabilitiesNet",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "IncreaseDecreaseInOtherNoncurrentAssets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "IncreaseDecreaseInPrepaidDeferredExpenseAndOtherAssets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInOperatingCapitalAbstract",
+      "member": "OperatingLeasePayments",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "AdjustmentsToAdditionalPaidInCapitalSharebasedCompensationRequisiteServicePeriodRecognitionValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "AdjustmentsToAdditionalPaidInCapitalStockIssuedIssuanceCosts",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "CommonStockSharesOutstanding",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "DividendsPreferredStock",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "NoncontrollingInterestIncreaseFromSubsidiaryEquityIssuance",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "PreferredStockDividendsShares",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "PreferredStockSharesOutstanding",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "ProfitLoss",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockForfeitedAndCanceledDuringPeriodShares",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockForfeitedAndCanceledDuringPeriodValue",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockForfeitedAndPlacedInTreasuryDuringPeriodShares",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodSharesConversionOfConvertibleSecurities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodSharesIssuedForDebtExtinguishment",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodSharesIssuedForServices",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodSharesNewIssues",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodSharesRestrictedStockAwardNetOfForfeitures",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodSharesShareBasedCompensation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodValueConversionOfConvertibleSecurities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodValueIssuedForDebtExtinguishment",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodValueIssuedForServices",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodValueNewIssues",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodValueRestrictedStockAwardNetOfForfeitures",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodValueShareBasedCompensation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockIssuedDuringPeriodValueStockDividend",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterestAndTemporaryEquity",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member": "TreasuryStockCommonShares",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityAccretionOfDividends",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityCarryingAmountAttributableToParent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityDividendsShares",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquitySharesOutstanding",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityStockIssuedDuringPeriodSharesConversionOfConvertibleSecurities",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityStockIssuedDuringPeriodSharesNewIssues",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityStockIssuedDuringPeriodValueConversionOfConvertibleSecurities",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityStockIssuedDuringPeriodValueNewIssues",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member": "TemporaryEquityStockIssuedIssuanceCosts",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "InterestRateContractMember",
+      "member": "InterestRateCapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InterestRateContractMember",
+      "member": "InterestRateFloorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InterestRateContractMember",
+      "member": "InterestRateSwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InterestRateContractMember",
+      "member": "InterestRateSwaptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAdvisoryManagementAndAdministrativeServiceMember",
+      "member": "AdministrativeServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAdvisoryManagementAndAdministrativeServiceMember",
+      "member": "AssetManagement1Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAdvisoryManagementAndAdministrativeServiceMember",
+      "member": "DistributionAndShareholderServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAdvisoryManagementAndAdministrativeServiceMember",
+      "member": "InvestmentAdviceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAdvisoryManagementAndAdministrativeServiceMember",
+      "member": "InvestmentPerformanceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAffiliatedIssuerControlledMember",
+      "member": "InvestmentsInMajorityOwnedSubsidiariesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAffiliatedIssuerControlledMember",
+      "member": "OtherControlledCompaniesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAffiliatedIssuerMember",
+      "member": "InvestmentAffiliatedIssuerControlledMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentAffiliatedIssuerMember",
+      "member": "InvestmentAffiliatedIssuerNoncontrolledMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentIssuerAffiliationDomain",
+      "member": "InvestmentAffiliatedIssuerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentIssuerAffiliationDomain",
+      "member": "InvestmentUnaffiliatedIssuerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentIssuerNameDomain",
+      "member": "InvestmentIssuerNameOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentTypeCategorizationMember",
+      "member": "MiscellaneousInvestmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentTypeCategorizationMember",
+      "member": "OtherAggregatedInvestmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "InvestmentTypeCategorizationMember",
+      "member": "SecuritiesInvestmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LandAndBuildingMember",
+      "member": "BuildingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LandAndBuildingMember",
+      "member": "LandImprovementsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LandAndBuildingMember",
+      "member": "LandMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LeasesOperatingAbstract",
+      "member": "OperatingLeaseCost",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LeasesOperatingAbstract",
+      "member": "OperatingLeaseExpense",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LeasesOperatingAbstract",
+      "member": "ShortTermLeaseCost",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LeasesOperatingAbstract",
+      "member": "SubleaseIncome",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LegalEntityAxis",
+      "member": "EntityDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LesseeLeaseDescriptionLineItems",
+      "member": "FinanceLeaseExpenseAbstract",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "LesseeLeaseDescriptionLineItems",
+      "member": "LeaseCost",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LesseeLeaseDescriptionLineItems",
+      "member": "LeasesOperatingAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAbstract",
+      "member": "AccountsPayableAndAccruedLiabilitiesCurrentAndNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAbstract",
+      "member": "AccrualForEnvironmentalLossContingencies",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAbstract",
+      "member": "OtherLiabilities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "CommitmentsAndContingencies",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "DeferredIncomeTaxLiabilitiesNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "FinanceLeaseLiabilityNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "Liabilities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "LiabilitiesAndStockholdersEquity",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "LiabilitiesCurrentAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "LongTermNotesPayable",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "OperatingLeaseLiabilityNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "OtherLiabilitiesNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesAndStockholdersEquityAbstract",
+      "member": "StockholdersEquityAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "AccountsPayableAndAccruedLiabilitiesCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "ContractWithCustomerLiabilityCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "CustomerDepositsCurrent1",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "DebtCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "DueToRelatedPartiesCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "FinanceLeaseLiabilityCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "LiabilitiesCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "LiabilitiesOfDisposalGroupIncludingDiscontinuedOperationCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "NotesPayableCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "OperatingLeaseLiabilityCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "OtherLiabilitiesCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesCurrentAbstract",
+      "member": "SalesAndExciseTaxPayableCurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "AccruedIncomeTaxesNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "DeferredCompensationLiabilityClassifiedNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "DeferredIncomeTaxLiabilitiesNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "DueToRelatedPartiesNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "FinanceLeaseLiabilityNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "LongTermDebtAndCapitalLeaseObligations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "LongTermDebtNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "OperatingLeaseLiabilityNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "OtherLiabilitiesNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LiabilitiesNoncurrentAbstract",
+      "member": "OtherLongTermDebtNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "InterestSensitiveLifeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "NonparticipatingLifeInsurancePolicyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "ParticipatingLifeInsurancePolicyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "TermLifeInsuranceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "UniversalLifeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "VariableLifeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "VariableUniversalLifeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LifeInsuranceSegmentMember",
+      "member": "WholeLifeInsuranceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeAxis",
+      "member": "ConvertibleDebtMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeAxis",
+      "member": "LineOfCreditMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeAxis",
+      "member": "LongtermDebtTypeDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeAxis",
+      "member": "MediumTermNotesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeAxis",
+      "member": "NotesPayableOtherPayablesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeDomain",
+      "member": "BondsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeDomain",
+      "member": "LineOfCreditMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "LongtermDebtTypeDomain",
+      "member": "MediumTermNotesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MajorCustomersAxis",
+      "member": "NameOfMajorCustomerDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ManagementServiceMember",
+      "member": "ManagementServiceBaseMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ManagementServiceMember",
+      "member": "ManagementServiceIncentiveMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MarketApproachValuationTechniqueMember",
+      "member": "ValuationTechniqueConsensusPricingModelMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MarketApproachValuationTechniqueMember",
+      "member": "ValuationTechniqueMatrixPricingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputAppraisedValueMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputCapRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputCommodityForwardPriceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputCommodityFuturePriceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputCommodityMarketPriceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputComparabilityAdjustmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputConstantPrepaymentRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputControlPremiumMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputConversionPriceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputCostToSellMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputCounterpartyCreditRiskMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputCreditSpreadMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputDefaultRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputDiscountForLackOfMarketabilityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputDiscountRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputEbitdaMultipleMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputEntityCreditRiskMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputExercisePriceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputExpectedDividendPaymentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputExpectedDividendRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputExpectedTermMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputInceptionDiscountRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputInsurancePolicyTermMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputLapseRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputLongTermRevenueGrowthRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputLossSeverityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputMaturityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputMorbidityRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputMortalityRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputOptionVolatilityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputPrepaymentRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputPriceVolatilityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputRevenueMultipleMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputRiskFreeInterestRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputSharePriceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputUtilizationRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MeasurementInputTypeDomain",
+      "member": "MeasurementInputWithdrawalRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MineralMember",
+      "member": "GoldMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MineralMember",
+      "member": "MineralExplorationMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MineralMember",
+      "member": "PublicUtilitiesInventoryCoalMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MinorityInterestLineItems",
+      "member": "CommonStockParOrStatedValuePerShare",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MinorityInterestLineItems",
+      "member": "EquityMethodInvestmentCommittedAmount",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "MinorityInterestLineItems",
+      "member": "EquityMethodInvestmentOwnershipPercentage",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MinorityInterestLineItems",
+      "member": "LineOfCreditFacilityMaximumBorrowingCapacity",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MinorityInterestLineItems",
+      "member": "MinorityInterestOwnershipPercentageByParent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "MinorityInterestLineItems",
+      "member": "StockholdersEquityNoteStockSplitConversionRatio1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NameOfMajorCustomerDomain",
+      "member": "CustomerAMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NameOfMajorCustomerDomain",
+      "member": "CustomerBMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NameOfMajorCustomerDomain",
+      "member": "CustomerCMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NameOfMajorCustomerDomain",
+      "member": "CustomerDMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NameOfMajorCustomerDomain",
+      "member": "CustomerEMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NameOfMajorCustomerDomain",
+      "member": "CustomerFMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NameOfMajorCustomerDomain",
+      "member": "OtherCustomerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "CashProvidedByUsedInFinancingActivitiesDiscontinuedOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "EarlyRepaymentOfDebt",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "FinanceLeasePrincipalPayments",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "MaturitiesOfDebt",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "NetCashProvidedByUsedInFinancingActivities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "NetCashProvidedByUsedInFinancingActivitiesContinuingOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "PaymentsOfDebtIssuanceCosts",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "PaymentsOfStockIssuanceCosts",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "PaymentsRelatedToTaxWithholdingForShareBasedCompensation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "ProceedsFromIssuanceInitialPublicOffering",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "ProceedsFromIssuanceOfMediumTermNotes",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "ProceedsFromIssuanceOfPreferredStockAndPreferenceStock",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "ProceedsFromMinorityShareholders",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member": "ProceedsFromRelatedPartyDebt",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInInvestingActivitiesAbstract",
+      "member": "CashProvidedByUsedInInvestingActivitiesDiscontinuedOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInInvestingActivitiesAbstract",
+      "member": "NetCashProvidedByUsedInInvestingActivities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInInvestingActivitiesAbstract",
+      "member": "NetCashProvidedByUsedInInvestingActivitiesContinuingOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInInvestingActivitiesAbstract",
+      "member": "PaymentsForDepositsOnEquipment",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInInvestingActivitiesAbstract",
+      "member": "PaymentsToAcquireInvestments",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInInvestingActivitiesAbstract",
+      "member": "PaymentsToAcquireProductiveAssets",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "AdjustmentsToReconcileNetIncomeLossToCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "CashProvidedByUsedInOperatingActivitiesDiscontinuedOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "IncomeLossFromContinuingOperationsIncludingPortionAttributableToNoncontrollingInterest",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "IncomeLossFromDiscontinuedOperationsNetOfTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "NetCashProvidedByUsedInOperatingActivities",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "NetIncomeLoss",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member": "NetIncomeLossAttributableToNoncontrollingInterest",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "EastRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "MidwestRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "NorthRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "NortheastRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "NorthwestRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "SouthRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "SoutheastRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "SouthwestRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NorthAmericaMember",
+      "member": "WestRegionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "DebtConversionConvertedInstrumentSharesIssued1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "DebtConversionConvertedInstrumentSharesIssuedFairValuePerShare",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "DueFromRelatedParties",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "DueToRelatedPartiesCurrentAndNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "GainsLossesOnExtinguishmentOfDebt",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "NotesPayableRelatedPartiesCurrentAndNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "RelatedPartyTransactionOwnershipInterest",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "RelatedPartyTransactionsNumberOfCustomers",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "NotePayableLineItems",
+      "member": "RevenueFromRelatedParties",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "AlternativeEnergyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "NaturalGasGatheringTransportationMarketingAndProcessingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "NaturalGasLiquidsReservesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "NaturalGasMidstreamMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "NaturalGasProductionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "NaturalGasStorageMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "NaturalGasUsRegulatedMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "OilAndCondensateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "OilAndGasExplorationAndProductionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "OilAndGasOperationAndMaintenanceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "OilAndGasProspectMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "OilAndGasPurchasedMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "OilAndGasRefiningAndMarketingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OilAndGasMember",
+      "member": "PublicUtilitiesInventoryPropaneMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OpenOptionContractsWrittenTypeDomain",
+      "member": "CallOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OpenOptionContractsWrittenTypeDomain",
+      "member": "PutOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "BondOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "CommodityOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "CreditDefaultOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "CreditSpreadOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "ForeignExchangeOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "InterestRateCapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "InterestRateFloorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "StockOptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OptionMember",
+      "member": "SwaptionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OtherInsuranceProductLineMember",
+      "member": "OtherLongdurationInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OtherInsuranceProductLineMember",
+      "member": "OtherShortdurationInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OtherPostretirementBenefitPlansDefinedBenefitMember",
+      "member": "DefinedBenefitPostretirementHealthCoverageMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OtherPostretirementBenefitPlansDefinedBenefitMember",
+      "member": "DefinedBenefitPostretirementLifeInsuranceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OwnershipAxis",
+      "member": "OwnershipDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "OwnershipDomain",
+      "member": "HighlandDigitalHoldingsLLCMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "OwnershipDomain",
+      "member": "SAIComputingLLCMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ParentMember",
+      "member": "AdditionalPaidInCapitalMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ParentMember",
+      "member": "CommonStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ParentMember",
+      "member": "PreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ParentMember",
+      "member": "RetainedEarningsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ParentMember",
+      "member": "TreasuryStockCommonMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ParentMember",
+      "member": "TreasuryStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PassengerMember",
+      "member": "MainlineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PassengerMember",
+      "member": "RegionalCarrierMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PlatformOperatorCryptoAssetResponsiblePartyDomain",
+      "member": "PlatformOperatorCryptoAssetAgentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PlatformOperatorCryptoAssetResponsiblePartyDomain",
+      "member": "PlatformOperatorCryptoAssetEntityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PlatformOperatorCryptoAssetResponsiblePartyDomain",
+      "member": "PlatformOperatorCryptoAssetPlatformUserMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PlatformOperatorCryptoAssetResponsiblePartyDomain",
+      "member": "PlatformOperatorCryptoAssetThirdPartyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PledgedStatusDomain",
+      "member": "AssetNotPledgedAsCollateralAndAssetPledgedAsCollateralWithoutRightMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PledgedStatusDomain",
+      "member": "AssetNotPledgedAsCollateralMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PledgedStatusDomain",
+      "member": "AssetPledgedAsCollateralMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PledgedStatusDomain",
+      "member": "AssetPledgedAsCollateralWithRightMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PledgedStatusDomain",
+      "member": "AssetPledgedAsCollateralWithoutRightMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PreferredStockMember",
+      "member": "ContingentConvertiblePreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PreferredStockMember",
+      "member": "ConvertiblePreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PreferredStockMember",
+      "member": "NonredeemablePreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PreferredStockMember",
+      "member": "RedeemablePreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PrivateEquityFundsMember",
+      "member": "PrivateEquityFundsDomesticMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PrivateEquityFundsMember",
+      "member": "PrivateEquityFundsForeignMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductMember",
+      "member": "ManufacturedProductOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductOrServiceAxis",
+      "member": "ProductsAndServicesDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "AICloudServicesMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "AccidentAndHealthInsuranceExcludingWorkersCompensationMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "AccidentAndHealthInsuranceSegmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "AdmissionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "AdvertisingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "CargoAndFreightMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "DisabilityInsurancePolicyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "ElectricityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "EnergyCommoditiesAndServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "EntertainmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "EnvironmentalRemediationMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "FinancialGuaranteeInsuranceSegmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "FixedAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "FranchisorMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "GovernmentContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "GrantMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "GroupPoliciesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "GuaranteedInvestmentContractMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "HealthCareMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "HealthInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "HotelMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "IndexedAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "IndividualPoliciesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "InvestmentsSegmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "LicenseMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "LifeAndAnnuityInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "LifeInsuranceSegmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "MembershipMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "MineralMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "NontraditionalLongDurationContractsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "OilAndGasMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "OtherInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "PassengerMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "ProductAndServiceOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "ProductMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "ProfessionalLiabilityInsuranceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "PropertyInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "PropertyLiabilityAndCasualtyInsuranceSegmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "PublicUtilitiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "RealEstateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "RoyaltyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "ServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "ShippingAndHandlingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "StructuredSettlementAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "SubscriptionAndCirculationMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "SuretySegmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "TerminalFundingAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "TimberMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "TitleInsuranceSegmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "VariableAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ProductsAndServicesDomain",
+      "member": "WorkersCompensationInsuranceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyLiabilityAndCasualtyInsuranceSegmentMember",
+      "member": "PropertyAndCasualtyCommercialInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyLiabilityAndCasualtyInsuranceSegmentMember",
+      "member": "PropertyAndCasualtyPersonalInsuranceProductLineMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentByTypeAxis",
+      "member": "PropertyPlantAndEquipmentTypeDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentLineItems",
+      "member": "AccumulatedDepreciationDepletionAndAmortizationPropertyPlantAndEquipment",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentLineItems",
+      "member": "PropertyPlantAndEquipmentGross",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentLineItems",
+      "member": "PropertyPlantAndEquipmentNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentLineItems",
+      "member": "PropertyPlantAndEquipmentUsefulLife",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentTypeDomain",
+      "member": "ConstructionInProgressMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentTypeDomain",
+      "member": "ElectricGenerationAndTransformersMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentTypeDomain",
+      "member": "EquipmentDepositsMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentTypeDomain",
+      "member": "FurnitureAndFixturesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentTypeDomain",
+      "member": "LandAndBuildingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PropertyPlantAndEquipmentTypeDomain",
+      "member": "SoftwareAndSoftwareDevelopmentCostsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PurchaseCommitmentExcludingLongtermCommitmentAxis",
+      "member": "PurchaseCommitmentExcludingLongtermCommitmentDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PurchaseCommitmentExcludingLongtermCommitmentDomain",
+      "member": "AICloudHostingServiceMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "PurchaseCommitmentExcludingLongtermCommitmentDomain",
+      "member": "EnergyServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PurchaseCommitmentExcludingLongtermCommitmentDomain",
+      "member": "GraphicsProcessingUnitsMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "PurchaseCommitmentExcludingLongtermCommitmentLineItems",
+      "member": "ContractualObligation",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PurchaseCommitmentExcludingLongtermCommitmentLineItems",
+      "member": "CostOfRevenue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "PurchaseCommitmentExcludingLongtermCommitmentLineItems",
+      "member": "HostingArrangementServiceContractTerm",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RangeAxis",
+      "member": "RangeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RangeMember",
+      "member": "MaximumMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RangeMember",
+      "member": "MinimumMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "CommercialRealEstateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "ConcessionsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "ConstructionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "LandMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "ManagementServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "ParkingMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "RealEstateOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "ResidentialRealEstateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RealEstateMember",
+      "member": "TimeShareMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ReclassificationTypeDomain",
+      "member": "ReclassificationOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RecourseStatusDomain",
+      "member": "NonrecourseMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RecourseStatusDomain",
+      "member": "RecourseMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedAndNonrelatedPartyStatusDomain",
+      "member": "NonrelatedPartyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedAndNonrelatedPartyStatusDomain",
+      "member": "RelatedPartyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyDomain",
+      "member": "AffiliatedEntityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyDomain",
+      "member": "NonrelatedPartyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyDomain",
+      "member": "OtherAffiliatesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyDomain",
+      "member": "RelatedPartyMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyDomain",
+      "member": "SubsidiariesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyDomain",
+      "member": "TrustForBenefitOfEmployeesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionAxis",
+      "member": "RelatedPartyTransactionDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionDomain",
+      "member": "AssetManagementArrangementMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionDomain",
+      "member": "InterestPayableMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "ContractWithCustomerLiability",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "CustomerDeposits",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "DebtInstrumentCarryingAmount",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "DebtInstrumentTermFeeAmount",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "DueFromRelatedParties",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "DueToRelatedPartiesCurrentAndNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "InterestPayableCurrentAndNoncurrent",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "RevenueFromContractWithCustomerExcludingAssessedTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "RevenueFromRelatedParties",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionLineItems",
+      "member": "SubleaseIncome",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RelatedPartyTransactionsByRelatedPartyAxis",
+      "member": "RelatedPartyDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RepurchaseAgreementCounterpartyNameDomain",
+      "member": "CustomerAMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RepurchaseAgreementCounterpartyNameDomain",
+      "member": "CustomerBByIndividualMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RepurchaseAgreementCounterpartyNameDomain",
+      "member": "CustomerBMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RepurchaseAgreementCounterpartyNameDomain",
+      "member": "IndividuallyImmaterialCounterpartiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RepurchaseAgreementCounterpartyNameDomain",
+      "member": "MinorityMemberOf121GigawattsMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RepurchaseAgreementCounterpartyNameDomain",
+      "member": "XsquaredHoldingLimitedMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "RestrictionTypeDomain",
+      "member": "AssetHeldInTrustMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RestrictionTypeDomain",
+      "member": "AssetPledgedAsCollateralMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanFundingStatusDomain",
+      "member": "FundedPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanFundingStatusDomain",
+      "member": "UnfundedPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanNameDomain",
+      "member": "RetirementPlanNameOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanSponsorLocationDomain",
+      "member": "DomesticPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanSponsorLocationDomain",
+      "member": "ForeignPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTaxStatusDomain",
+      "member": "NonqualifiedPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTaxStatusDomain",
+      "member": "QualifiedPlanMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTypeDomain",
+      "member": "OtherPensionPlansDefinedBenefitMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTypeDomain",
+      "member": "OtherPensionPlansPostretirementOrSupplementalPlansDefinedBenefitMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTypeDomain",
+      "member": "OtherPostretirementBenefitPlansDefinedBenefitMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTypeDomain",
+      "member": "PensionPlansDefinedBenefitMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTypeDomain",
+      "member": "PostemploymentRetirementBenefitsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "RetirementPlanTypeDomain",
+      "member": "SupplementalEmployeeRetirementPlanDefinedBenefitMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ScheduleOfEquityMethodInvestmentEquityMethodInvesteeNameAxis",
+      "member": "EquityMethodInvesteeNameDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SecuritiesInvestmentMember",
+      "member": "EquitySecuritiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SecuritiesInvestmentMember",
+      "member": "FixedIncomeInvestmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentDomain",
+      "member": "AllOtherSegmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentDomain",
+      "member": "CorporateAndOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentDomain",
+      "member": "CorporateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentDomain",
+      "member": "MiningSegmentMember",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "AfricaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "AmericasMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "AsiaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "AsiaPacificMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "CA",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "CentralAmericaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "EMEAMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "EuropeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "EuropeanUnionMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "GB",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "LatinAmericaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "MiddleEastMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "NonUsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "NorthAmericaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "SouthAmericaMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SegmentGeographicalDomain",
+      "member": "US",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SeriesAAndBPreferredStockMember",
+      "member": "SeriesAPreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SeriesAAndBPreferredStockMember",
+      "member": "SeriesBPreferredStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ServiceMember",
+      "member": "FinancialServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ServiceMember",
+      "member": "LicenseAndMaintenanceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ServiceMember",
+      "member": "LicenseAndServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ServiceMember",
+      "member": "MaintenanceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ServiceMember",
+      "member": "OilAndGasServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ServiceMember",
+      "member": "ServiceOtherMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ServiceMember",
+      "member": "TechnologyServiceMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeitedInPeriod",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriod",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedNumber",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriod",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValueRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsForfeituresWeightedAverageGrantDateFairValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValueRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriodWeightedAverageGrantDateFairValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValueRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValueRollForward",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsVestedInPeriodWeightedAverageGrantDateFairValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "CommonStockParOrStatedValuePerShare",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "CommonStockSharesAuthorized",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "CommonStockSharesIssued",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "CommonStockSharesOutstanding",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognized",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "EmployeeServiceShareBasedCompensationNonvestedAwardsTotalCompensationCostNotYetRecognizedPeriodForRecognition1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "NumberOfOperatingSegments",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "NumberOfReportableSegments",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "RestrictedCash",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardRequisiteServicePeriod1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsInPeriod",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsGrantsToDate",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedRollForward",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardEquityInstrumentsOtherThanOptionsNonvestedWeightedAverageGrantDateFairValueRollForward",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "ShareBasedCompensationArrangementByShareBasedPaymentAwardNumberOfPlans",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "StockForfeitedAndCanceledDuringPeriodShares",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "StockForfeitedAndPlacedInTreasuryDuringPeriodShares",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementByShareBasedPaymentAwardLineItems",
+      "member": "StockholdersEquityNoteStockSplitConversionRatio1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementsByShareBasedPaymentAwardAwardTypeAndPlanNameDomain",
+      "member": "RestrictedStockMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ShareBasedCompensationArrangementsByShareBasedPaymentAwardAwardTypeAndPlanNameDomain",
+      "member": "RestrictedStockUnitsRSUMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementBusinessSegmentsAxis",
+      "member": "SegmentDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementClassOfStockAxis",
+      "member": "ClassOfStockDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementEquityComponentsAxis",
+      "member": "EquityComponentDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "AssetsAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalents",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsDisposalGroupIncludingDiscontinuedOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsPeriodIncreaseDecreaseIncludingExchangeRateEffect",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "CashFlowNoncashInvestingAndFinancingActivitiesDisclosureAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "IncreaseDecreaseInStockholdersEquityRollForward",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "IncreaseDecreaseInTemporaryEquityRollForward",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "LiabilitiesAndStockholdersEquityAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "NetCashProvidedByUsedInFinancingActivitiesAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "NetCashProvidedByUsedInInvestingActivitiesAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "NetCashProvidedByUsedInOperatingActivitiesAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementLineItems",
+      "member": "SupplementalCashFlowElementsAbstract",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeLossCashFlowHedgeGainLossBeforeReclassificationAfterTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeLossCashFlowHedgeGainLossBeforeReclassificationAndTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeLossDerivativeExcludedComponentIncreaseDecreaseBeforeAdjustmentsAfterTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeLossDerivativeExcludedComponentIncreaseDecreaseBeforeAdjustmentsAndTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeLossFinancialLiabilityFairValueOptionUnrealizedGainLossArisingDuringPeriodAfterTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeLossFinancialLiabilityFairValueOptionUnrealizedGainLossArisingDuringPeriodBeforeTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeUnrealizedHoldingGainLossOnSecuritiesArisingDuringPeriodBeforeTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StatementOfOtherComprehensiveIncomeAbstract",
+      "member": "OtherComprehensiveIncomeUnrealizedHoldingGainLossOnSecuritiesArisingDuringPeriodNetOfTax",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StockholdersEquityAbstract",
+      "member": "AdditionalPaidInCapital",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StockholdersEquityAbstract",
+      "member": "CommonStockValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StockholdersEquityAbstract",
+      "member": "MinorityInterest",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StockholdersEquityAbstract",
+      "member": "RetainedEarningsAccumulatedDeficit",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StockholdersEquityAbstract",
+      "member": "StockholdersEquity",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StockholdersEquityAbstract",
+      "member": "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "StockholdersEquityAbstract",
+      "member": "TreasuryStockValue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "ContractWithCustomerLiability",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "DebtInstrumentCarryingAmount",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "FinanceLeaseLiabilityPaymentsDue",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "LesseeFinanceLeaseTermOfContract1",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "PaymentsOfStockIssuanceCosts",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "ProceedsFromDebtNetOfIssuanceCosts",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "ProceedsFromIssuanceOfCommonStock",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "PurchaseObligationReceivedAndDeployed",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "PurchaseObligationUnits",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "RightOfUseAssetObtainedInExchangeForFinanceLeaseLiabilityUnits",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "SaleOfStockMaximumConsiderationToBeReceived",
+      "member_ns": "COMPANY"
+    },
+    {
+      "axis": "SubsequentEventLineItems",
+      "member": "SaleOfStockNumberOfSharesIssuedInTransaction",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventTypeAxis",
+      "member": "SubsequentEventTypeDomain",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SubsequentEventTypeDomain",
+      "member": "SubsequentEventMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SupplementalCashFlowElementsAbstract",
+      "member": "IncomeTaxesPaid",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SupplementalCashFlowElementsAbstract",
+      "member": "InterestPaidNet",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SwapMember",
+      "member": "BasisSwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SwapMember",
+      "member": "CreditDefaultSwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SwapMember",
+      "member": "CurrencySwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SwapMember",
+      "member": "EquitySwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "SwapMember",
+      "member": "InterestRateSwapMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TimingOfTransferOfGoodOrServiceDomain",
+      "member": "TransferredAtPointInTimeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TimingOfTransferOfGoodOrServiceDomain",
+      "member": "TransferredOverTimeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "AccruedLiabilitiesMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "CommitmentsToExtendCreditMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "CommoditiesInvestmentMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "DebtMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "DepositsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "DerivativeMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "EquityFundsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "FairValueOptionOtherEligibleItemsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "HedgeFundsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "InterestRateLockCommitmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "LoanOriginationCommitmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "LoanPurchaseCommitmentsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "LongTermDebtMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "PolicyLoansMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "PrivateEquityFundsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "RealEstateFundsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "SeniorDebtObligationsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "ShortTermDebtMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "UnusedLinesOfCreditMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TransfersAndServicingOfFinancialInstrumentsTypesOfFinancialInstrumentsDomain",
+      "member": "VentureCapitalFundsMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201026Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201104Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201307Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201409Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201601Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201602Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201604Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201613Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201704Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201705Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201708Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201710Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201711Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201712Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201715Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201801Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201802Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201803Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201804Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201807Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201808Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201809Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201811Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201812Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201814Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201815Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201816Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201817Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201818Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201820Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201901Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201902Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201904Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201905Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate201911Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate202008Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate202101Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate202104Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "TypeOfAdoptionMember",
+      "member": "AccountingStandardsUpdate202105Member",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "UsefulLifeDescriptionOfTermDomain",
+      "member": "UsefulLifeShorterOfTermOfLeaseOrAssetUtilityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "UsefulLifeDescriptionOfTermDomain",
+      "member": "UsefulLifeTermOfLeaseMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ValuationTechniqueDomain",
+      "member": "CostApproachValuationTechniqueMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ValuationTechniqueDomain",
+      "member": "IncomeApproachValuationTechniqueMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "ValuationTechniqueDomain",
+      "member": "MarketApproachValuationTechniqueMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableAnnuityMember",
+      "member": "DeferredVariableAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableAnnuityMember",
+      "member": "ImmediateVariableAnnuityMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableRateDomain",
+      "member": "BaseRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableRateDomain",
+      "member": "EurodollarMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableRateDomain",
+      "member": "FederalFundsEffectiveSwapRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableRateDomain",
+      "member": "PrimeRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableRateDomain",
+      "member": "SecuredOvernightFinancingRateSofrOvernightIndexSwapRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableRateDomain",
+      "member": "SifmaMunicipalSwapRateMember",
+      "member_ns": "STANDARD"
+    },
+    {
+      "axis": "VariableRateDomain",
+      "member": "UsTreasuryUstInterestRateMember",
+      "member_ns": "STANDARD"
+    }
+  ],
+  "parent_version_id": "v3",
+  "source_filing": "0001144879-23-000176",
+  "taxonomy_year": "2025",
+  "unresolved": [],
+  "version_id": "v4"
+}

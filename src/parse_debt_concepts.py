@@ -3,7 +3,7 @@
 parse_debt_concepts.py
 
  Load one APLD filing with Arelle and extract debt-related concepts.
-Designed for reuse in Day 5+ pipeline.
+Designed for reuse in the processing pipeline.
 """
 
 import argparse
@@ -11,7 +11,6 @@ import logging
 import sys
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterator
 
 #  Arelle imports 
 try:
@@ -72,7 +71,7 @@ COMPANY_URIS = frozenset([
 ])
 
 
-#  Extractor class (reusable for Day 5+) 
+#  Extractor class (reusable across filings) 
 
 class DebtConceptExtractor:
     """
@@ -118,7 +117,8 @@ class DebtConceptExtractor:
                 logger.warning("  Arelle error: %s", err)
 
         logger.info(
-            "Loaded. Model document: %s | Concepts: %d",
+            "Loaded %s | Document: %s | Total concepts: %d",
+            entry_point.name,
             model_xbrl.modelDocument.basename,
             len(model_xbrl.qnameConcepts),
         )
@@ -219,9 +219,9 @@ def print_concepts_table(concepts: list[DebtConcept], filing_name: str) -> None:
     print(f"\nTotal: {total} | COMPANY: {company} | STANDARD: {standard}")
 
 
-def cross_check_day3(concepts: list[DebtConcept]) -> None:
+def cross_check_known_concepts(concepts: list[DebtConcept]) -> None:
     """
-    Verify key concepts from manual Day 3 trace appear in Arelle output.
+    Verify known key concepts appear in Arelle output.
     """
     print(f"\n{'='*75}")
     print("DAY 3 CROSS-CHECK")
@@ -237,12 +237,12 @@ def cross_check_day3(concepts: list[DebtConcept]) -> None:
         else:
             print(f"  ✗ {key} — NOT FOUND")
 
-    # Also check for the $4.96B concept from Day 3 (exact name preferred)
+    # Also check for the $4.96B concept (exact name preferred)
     notes = [c for c in concepts if c.name == "LongTermNotesPayable"]
     if not notes:
         notes = [c for c in concepts if "LongTermNotesPayable" in c.name]
     if notes:
-        print(f"\n  Day 3 value check: {notes[0].name} found with label '{notes[0].label}'")
+        print(f"\n  Value check: {notes[0].name} found with label '{notes[0].label}'")
 
 
 #  Main 
@@ -280,7 +280,7 @@ def main() -> int:
             model = extractor.load_filing(entry_point)
             concepts = extractor.extract_debt_concepts(model)
             print_concepts_table(concepts, args.filing)
-            cross_check_day3(concepts)
+            cross_check_known_concepts(concepts)
     except RuntimeError as e:
         logger.error("Failed to process filing: %s", e)
         return 1

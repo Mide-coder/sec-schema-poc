@@ -188,7 +188,7 @@ def render_tree(tree: dict[str, list[CalculationArc]]) -> str:
 def inspect_calc(cal_path: Path | str, *, echo: bool = True) -> str:
     """
     Full inspection of a calculation linkbase.  Returns the report text
-    and (if echo) prints it and writes it to notes/day3_inspection/.
+    and (if echo) prints it and writes it to notes/inspection/.
     """
     cal_path = Path(cal_path)
     arcs = parse_calculation_arcs(cal_path)

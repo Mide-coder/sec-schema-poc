@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-day9_demo.py
+pipeline_test.py
 
-Day 9: Process one filing end-to-end, then re-evaluate historical.
+Process one filing end-to-end, then re-evaluate historical.
 """
 
 import sys

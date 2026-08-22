@@ -9,8 +9,7 @@ from __future__ import annotations
 
 import hashlib
 import json
-from dataclasses import dataclass, field, asdict
-from typing import Any
+from dataclasses import dataclass, field
 
 
 @dataclass(frozen=True, slots=True)
@@ -71,7 +70,14 @@ class SchemaVersion:
         """
         Hash only the debt-relevant subgraph for no-op detection.
         If APLD adds a revenue concept but doesn't touch debt, this hash stays the same.
+        
+        Dimension arcs are filtered to only those involving debt-relevant concepts
+        (concepts in self.concepts). Non-debt standard taxonomy dimension arcs
+        from each filing's definition linkbase are excluded.
         """
+        # Build set of known debt-relevant concept names for dimension arc filtering
+        debt_concept_names = {c.name for c in self.concepts}
+        
         data = {
             "concepts": sorted([
                 {"name": c.name, "ns": c.namespace_type, "total": c.is_total, "comp": c.is_component}
@@ -84,6 +90,7 @@ class SchemaVersion:
             "dimension_arcs": sorted([
                 {"axis": a.axis_name, "member": a.member_name}
                 for a in self.dimension_arcs
+                if a.axis_name in debt_concept_names or a.member_name in debt_concept_names
             ], key=lambda x: (x["axis"], x["member"])),
         }
         json_bytes = json.dumps(data, sort_keys=True).encode("utf-8")
