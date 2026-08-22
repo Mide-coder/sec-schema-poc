@@ -159,8 +159,9 @@ class SchemaStore:
         return path
 
     def list_versions(self) -> list[str]:
-        """Return all version IDs in chronological order."""
-        return sorted(self._versions.keys())
+        """Return all version IDs in chronological order (v0, v1, v2, ..., v10)."""
+        versions = sorted(self._versions.keys(), key=lambda v: int(v[1:]))
+        return versions
 
     def get_version(self, version_id: str) -> SchemaVersion | None:
         """Fetch a version by ID."""
@@ -178,6 +179,7 @@ class SchemaStore:
         graph: SchemaGraph,
         source_filing: str,
         taxonomy_year: str | None,
+        unresolved: tuple = tuple(),
     ) -> SchemaVersion:
         """
         Create a new version from a graph, or return existing if hash matches.
@@ -191,6 +193,7 @@ class SchemaStore:
             parent_version_id=self._latest_version_id(),
             source_filing=source_filing,
             taxonomy_year=taxonomy_year,
+            unresolved=unresolved,
         )
         
         # No-op detection: does this hash already exist?

@@ -135,6 +135,7 @@ class SchemaGraph:
         parent_version_id: str | None = None,
         source_filing: str | None = None,
         taxonomy_year: str | None = None,
+        unresolved: tuple = tuple(),
     ) -> SchemaVersion:
         """
         Freeze the current graph into an immutable SchemaVersion.
@@ -171,7 +172,7 @@ class SchemaGraph:
             concepts=concepts,
             calc_arcs=calc_arcs,
             dimension_arcs=dimension_arcs,
-            unresolved=tuple(),  # Populated by diff engine later
+            unresolved=unresolved,
         )
         return version.with_hash()
 

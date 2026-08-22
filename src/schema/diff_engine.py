@@ -213,7 +213,9 @@ class DiffEngine:
                 parent = rel.fromModelObject
                 if parent:
                     parent_name = str(parent.qname.localName)
-                    if parent_name in self._all_names:
+                    parent_ns = str(parent.qname.namespaceURI)
+                    # Accept if parent is in schema OR is a standard taxonomy axis
+                    if parent_name in self._all_names or classify_namespace(parent_ns) == "STANDARD":
                         return f"Dimension member of {parent_name}"
 
         # Presentation child
