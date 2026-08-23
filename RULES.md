@@ -166,9 +166,9 @@ Each company member is resolved because it belongs to a standard taxonomy domain
 
 **Rule 10b:** The amendment's `parent_version_id` points to the version created by the **original** filing it amends, not the chronologically prior version.
 
-**Real example:** APLD's `0001144879-22-000043` (10-K/A, filed 2022-09-27) amends the original `0001144879-22-000052` (10-K). The amendment created its own version with `parent_version_id` pointing to the version from the original. Even when content was identical to the immediately-preceding version, `force_new=True` ensured it still got its own version.
+**Status: unit-tested against a real accession, not currently integration-tested through the main pipeline.** APLD has 3 real amendments on record (`0001144879-22-000043` 10-K/A filed 2022-09-27, `0001898844-23-000012` 10-K/A filed 2023-10-12, `0001144879-09-000009` 10-Q/A filed 2009-02-05). `tests/test_amendments.py` exercises Rule 10's logic against the first of these, a genuine SEC accession number, and confirms the parent-version-pointing behavior works correctly in isolation. However, `run_clean.py` — the script that produces the main, fully-verified 18-version chronological schema — filters ingestion to `form in ("10-K", "10-Q")` only, which excludes all `/A` filings. This means Rule 10 is proven correct as a unit, but has not been exercised end-to-end as part of the reproducibility-verified pipeline. This is a scope gap, not a correctness bug: nothing about excluding amendments affects the immutability guarantee for the 18 filings that *are* processed (see Rule 14 and the reproducibility proof below). Documented in README "Known limitations."
 
-**Why immutability matters:** The original schema version represents what was known at filing time. The amendment represents corrected understanding. Both are preserved as separate points in time.
+**Why immutability matters:** The original schema version represents what was known at filing time. The amendment represents corrected understanding. Both are preserved as separate points in time — this remains true for the 18 filings actually processed; it just hasn't been demonstrated for a real amendment flowing through the full pipeline.
 
 ---
 
@@ -227,19 +227,46 @@ Because the hash included the noise, filings that changed *only* unrelated taxon
 
 **Fix:** on encountering a previously-unresolved concept, the diff engine now always re-runs the relationship-evidence check (Rules 5–8) fresh. If evidence now exists, resolve. If not, carry forward as unresolved (not force-resolved, not force-reverted).
 
-**Real examples confirmed monotonic after fix (9 concepts):**
+**Re-confirmed under corrected chronological order (Rule 14) — 4 concepts individually re-audited:**
+
+| Concept | Unresolved in | Resolved in | Status |
+|---|---|---|---|
+| `ClassOfWarrantOrRightGranted` | v13 (first seen) | v14 onward | Monotonic |
+| `DebtConversionConvertedInstrumentSharesIssuedFairValuePerShare` | never unresolved | v1 onward | Resolved on first sight |
+| `EarlyRepaymentOfDebt` | v3, v5 | v6 onward | Monotonic |
+| `PreferredStockConvertibleSharesIssuablePerShare` | — | — | Confirmed absent across all 18 versions (Rule 12 exclusion holds under corrected order) |
+
+**Remaining genuinely unresolved at final version (v17), per Rule 9's "genuinely unaligned" category:**
 ```
-DebtConversionTermsOneMember
-DebtInstrumentConvertibleTermsOfConversionAxis
-DebtInstrumentConvertibleTermsOfConversionDomain
-DebtInstrumentMandatoryPrepaymentTermsAxis
-DebtInstrumentMandatoryPrepaymentTermsDomain
-DeferredTaxAssetsConvertibleDebtInstruments
-EffectiveIncomeTaxRateReconciliationConvertibleDebtInstrumentsPercent
-NotePayableLineItems
-VariableRateAfterOneYearAnniversaryWhileSOFRLoansBearInterestMember
+DebtInstrumentMandatoryPrepaymentTermsAxis        (introduced at v17, the final filing — no chance yet to resolve)
+DebtInstrumentMandatoryPrepaymentTermsDomain      (introduced at v17, the final filing — no chance yet to resolve)
 ```
-Each now appears as unresolved only at first sight (or, for three of them — the `DebtInstrumentConvertibleTermsOfConversion*` trio and `DebtConversionTermsOneMember` — remains legitimately unresolved through v18, per Rule 9's "genuinely unaligned" category).
+The `DebtInstrumentConvertibleTermsOfConversionAxis` / `...Domain` / `DebtConversionTermsOneMember` trio (previously documented as unresolved in v17 of the pre-chronology-fix run) is unresolved in v11 and v13 under the corrected order, and never resolved into concepts across the full 18-version history — same conclusion as before, now under the correct chronology.
+
+**Total distinct concepts unresolved at some point across full corrected history: 17** (down from 18 under the buggy ordering — one flip-flop artifact eliminated by proper sequencing, not by loosening any rule).
+
+---
+
+## Rule 14 — Chronological Processing Order (bug found and fixed)
+
+**Requirement:** filings must be processed in true SEC acceptance order, so that no schema version reflects information that didn't yet exist at that point in time.
+
+**Bug found:** the ingestion sort key was the accession number *string* (`f["accession"]`), not the acceptance date. Accession numbers are prefixed by filing-agent ID, not by date — APLD's history includes filings submitted directly (`0001144879-*`) and filings submitted through outside agents (`0001628280-*`, `0001898844-*`). String-sorting groups by agent prefix first, not chronologically.
+
+**Evidence this was a real bug, not a cosmetic mismatch:** under the buggy sort, accession `0001628280-22-014389` (accepted **2022-05-13**, the second-oldest XBRL filing in the whole history) was processed **15th of 21**, becoming version `v15` — built on top of a schema that had already accumulated knowledge from filings accepted in 2023, 2024, 2025, and 2026. That is a direct violation of the point-in-time requirement: a version representing "what was knowable in May 2022" was actually constructed using relationship evidence from filings 4 years later.
+
+**Fix:** sort key changed to the true acceptance timestamp:
+```python
+filings.sort(key=lambda f: f["acceptanceDateTime"])
+```
+
+**Verification after fix:**
+- Full chronological mapping table regenerated from `submissions.json` acceptance timestamps, confirmed monotonically increasing by date across all 21 filings (18 processed, 3 pre-XBRL skipped).
+- **No-future-info spot check on v1** (now correctly the earliest post-baseline version, from the May 2022 filing): confirmed absence of 5 concepts known to be introduced by later filings (`ConvertibleSeniorNotesDue2030Member`, `SMBCMember`, `StarionLoanMember`, `ClassOfWarrantOrRightGranted`, `DebtInstrumentConvertibleTermsOfConversionAxis`) — all correctly absent.
+- **Byte-level reproducibility re-verified** under the corrected order: two independent full wipes → rebuild v0 → reprocess all 21 filings produced identical SHA-256 hashes for all 18 version files.
+- **A genuine no-op was uncovered by the fix**, previously hidden by the wrong ordering: filing `0001144879-24-000010` (accepted 2024-01-16) now correctly reuses `v7` rather than creating a spurious new version, because it immediately follows its true chronological neighbor and produces an identical debt-relevant hash.
+
+**Corrected final state:** 18 schema versions (v0–v17), not 19 — one fewer version than the pre-fix run, because the fix surfaced one real no-op that the wrong ordering had obscured. See Classification Summary below for updated counts.
 
 ---
 
@@ -275,15 +302,15 @@ Debt-adjacent concepts like `DebtInstrumentUnamortizedDiscount`, `PaymentsOfDebt
 
 ## Reproducibility Proof
 
-After Rules 11a, 12, and 13 were implemented, the full pipeline was verified with byte-level reproducibility, not just version-count matching:
+After Rules 11a, 12, 13, and 14 were implemented — including the chronological-order fix, the most significant of the four — the full pipeline was verified with byte-level reproducibility, not just version-count matching:
 
-- Two independent full wipes → rebuild v0 → reprocess all 21 filings.
-- All 19 resulting schema version files (v0.json–v18.json) matched **SHA-256 checksum, file size, and content hash, byte-for-byte** across both runs.
-- Final state: 19 versions (v0–v18), 114 concepts at v18, 0 unresolved at v18, 18 concepts unresolved at some point across history (down from 52 pre-fix, reflecting the removal of one false positive and the resolution of monotonicity flip-flops — not rules being loosened).
+- Two independent full wipes → rebuild v0 → reprocess all 21 filings, in correct SEC acceptance order.
+- All 18 resulting schema version files (v0.json–v17.json) matched **SHA-256 checksum, file size, and content hash, byte-for-byte** across both runs.
+- Final state: **18 versions (v0–v17)**, 114 concepts at v17, **2 unresolved at v17** (the final filing's mandatory-prepayment-terms concepts, which haven't had a subsequent filing yet to potentially resolve them), **17 concepts unresolved at some point across history** (down from 52 in the original pre-fix run, reflecting the removal of one false positive, the resolution of monotonicity flip-flops, and one flip-flop artifact eliminated purely by correct chronological sequencing — not by loosening any rule).
 
 ---
 
-## Classification Summary (post-fix, v18)
+## Classification Summary (post-fix, v17 — final, chronologically correct)
 
 | Category | Rule | Evidence type |
 |----------|------|--------------|
@@ -294,16 +321,17 @@ After Rules 11a, 12, and 13 were implemented, the full pipeline was verified wit
 | NEW_EXTENSION_UNRESOLVED | 9 | Absence of all evidence — see the two-flavor breakdown under Rule 9 |
 | *(excluded, not classified)* | 12 | Keyword match with no debt-family relationship — never enters the schema |
 
-**Final state (v18):** 114 total concepts tracked, 0 unresolved. 18 concepts were unresolved at some point across the full 21-filing history; 9 of those are documented flip-flop concepts now monotonic (3 remain legitimately unresolved through v18 per Rule 9), and the remainder resolved once sufficient relationship evidence appeared in later filings.
+**Final state (v17):** 114 total concepts tracked (19 standard + 95 company extensions), 2 unresolved. 17 concepts were unresolved at some point across the full 21-filing history (18 processed, 3 pre-XBRL skipped); several are documented flip-flop concepts now monotonic, 2 are open at the final version because it's the most recent filing and hasn't had a chance to be followed up on, and the `DebtInstrumentConvertibleTermsOfConversion*` trio remains legitimately unresolved throughout, per Rule 9's "genuinely unaligned" category.
 
 ---
 
 ## Known Bugs Found and Fixed (for the record)
 
-This project's validation process surfaced two real, non-trivial bugs — both found through targeted manual audits against real filing text, not by the automated test suite alone. Documenting them here because the audit process itself is part of the deliverable:
+This project's validation process surfaced four real, non-trivial bugs — all found through targeted manual audits against real filing text and data, not by the automated test suite passing or failing alone. Documenting them here because the audit process itself is part of the deliverable:
 
 1. **Hash scope too broad (Rule 11a).** Caused every filing to appear to change the debt taxonomy, even when only unrelated taxonomy areas changed. Found by manually diffing two consecutive version pairs and checking whether the changes were debt-relevant.
 2. **Seeding filter too permissive (Rule 12).** Caused one equity concept (`PreferredStockConvertibleSharesIssuablePerShare`) to enter the debt schema via keyword overlap. Found by manually reading the source filing text for a spot-checked resolved concept.
 3. **Monotonic-resolution fix over-corrected (Rule 13, discovered while fixing #2).** The first fix for flip-flopping concepts prevented a genuinely-resolvable concept (`ClassOfWarrantOrRightGranted`) from ever transitioning to resolved. Found by re-running the *original* three manually-verified concepts as a regression check after an unrelated fix — not assuming they still held.
+4. **Filings processed out of chronological order (Rule 14) — the most significant of the four.** The pipeline sorted by accession-number string instead of acceptance date, which silently reordered filings whenever a different filing agent's accession prefix intervened. This meant a 2022 filing was, at one point, processed using relationship evidence from filings accepted 4 years later — a direct violation of the point-in-time requirement. Found not by an automated test, but by insisting on a complete, filing-by-filing chronological mapping table and noticing the version numbers didn't correspond to a sane date order.
 
-None of these were caught by "the pipeline ran without errors." All three were caught by deliberately re-verifying specific, named pieces of evidence against real filing text after every change.
+None of these were caught by "the pipeline ran without errors." All four were caught by deliberately re-verifying specific, named pieces of evidence — concept classifications, filing texts, or full mapping tables — after every change, and by refusing to accept a partial or summarized version of that evidence when something looked off.

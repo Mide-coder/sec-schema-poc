@@ -35,7 +35,7 @@ CIK = "0001144879"
 
 
 def load_all_filings() -> list[dict]:
-    """Load 10-K/10-Q filings from submissions, sorted by accession (chronological)."""
+    """Load 10-K/10-Q filings from submissions, sorted by SEC acceptance datetime (chronological)."""
     submissions = CACHE_DIR / CIK / "submissions.json"
     with open(submissions, encoding="utf-8") as f:
         data = json.load(f)
@@ -44,13 +44,22 @@ def load_all_filings() -> list[dict]:
     forms = recent.get("form", [])
     dates = recent.get("filingDate", [])
     accession_numbers = recent.get("accessionNumber", [])
+    acceptance_datetimes = recent.get("acceptanceDateTime", [])
 
     filings = []
-    for form, date, acc in zip(forms, dates, accession_numbers):
+    for form, date, acc, adt in zip(forms, dates, accession_numbers, acceptance_datetimes):
         if form in ("10-K", "10-Q"):
-            filings.append({"form": form, "date": date, "accession": acc})
+            filings.append({
+                "form": form,
+                "date": date,
+                "accession": acc,
+                "acceptanceDateTime": adt,
+            })
 
-    filings.sort(key=lambda f: f["accession"])
+    # Sort by actual SEC acceptance datetime — NOT by accession string.
+    # Accession prefixes encode the filing agent (e.g. 0001628280 = Donnelley),
+    # not filing chronology. String sort groups by agent, not time.
+    filings.sort(key=lambda f: f["acceptanceDateTime"])
     return filings
 
 
@@ -172,7 +181,7 @@ def main() -> int:
 
         t_start = time.time()
         try:
-            version = process_filing(CIK, accession, form=form)
+            version = process_filing(CIK, accession)
         except Exception as e:
             print(f"  ERROR: {e}")
             errors += 1
