@@ -89,7 +89,7 @@ Worth stating explicitly here, not just in the README: a version's `unresolved` 
 ## How to Verify
 
 ```bash
-PYTHONPATH=src python src/inspect/day13_validation.py
+PYTHONPATH=src python src/inspect/validate_pipeline.py
 ```
 
 Reproducibility check (must be run from a clean state to be meaningful):

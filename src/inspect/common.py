@@ -30,7 +30,7 @@ from xml.etree import ElementTree as ET
 
 PROJECT_ROOT = Path(__file__).resolve().parents[2]
 CACHE_DIR = PROJECT_ROOT / "cache"
-NOTES_DIR = PROJECT_ROOT / "notes" / "inspection"
+NOTES_DIR = PROJECT_ROOT / "notes"
 
 # The 10-K filing from the local cache
 CIK = "0001144879"

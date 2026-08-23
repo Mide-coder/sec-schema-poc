@@ -1,6 +1,6 @@
 ==============================================================================
  NAMESPACES - apld-20260531_htm.xml
- Generated: C:\Users\Admin\projects\sec-schema-poc\notes\day3_inspection\namespaces.txt
+ Generated: C:\Users\Admin\projects\sec-schema-poc\notes\namespaces.txt
 ==============================================================================
 
 ==============================================================================

@@ -1,6 +1,6 @@
 ==============================================================================
  CALC VS PRESENTATION
- Generated: C:\Users\Admin\projects\sec-schema-poc\notes\day3_inspection\linkbase_comparison.txt
+ Generated: C:\Users\Admin\projects\sec-schema-poc\notes\linkbase_comparison.txt
 ==============================================================================
 
 ==============================================================================
