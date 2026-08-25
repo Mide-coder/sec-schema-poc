@@ -1,23 +1,15 @@
-
-"""
-dimension_extractor.py
-
- Extract XBRL Dimensions (definition linkbase) structures.
-Finds axes, members, and hypercubes related to debt concepts.
-"""
-
-from __future__ import annotations
+"""Extracts XBRL dimensions, axes, and domain members from definition linkbases."""
 
 import logging
 from dataclasses import dataclass, field
 
 from xbrl_utils import (
-    classify_namespace,
     DEBT_KEYWORDS,
     DIM_ALL,
-    DIM_HYPERCUBE_DIMENSION,
     DIM_DIMENSION_DOMAIN,
     DIM_DOMAIN_MEMBER,
+    DIM_HYPERCUBE_DIMENSION,
+    classify_namespace,
 )
 
 logger = logging.getLogger(__name__)

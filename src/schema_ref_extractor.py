@@ -1,10 +1,4 @@
-
-"""
-schema_ref_extractor.py
-
-Extract schemaRef URIs from a loaded Arelle model and identify
-the US-GAAP taxonomy year declared by the filing.
-"""
+"""Extracts schemaRef URIs and identifies declared US-GAAP taxonomy year."""
 
 import logging
 import re

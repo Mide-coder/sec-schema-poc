@@ -1,22 +1,10 @@
-#!/usr/bin/env python3
-"""
-test_amendments.py
+"""Tests for synthetic amendment detection and versioning."""
 
-Synthetic amendment tests.
-Validates amendment detection, force-new-version, and parent linking.
-"""
-
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
-
-from schema.version_store import SchemaStore
+from config import SCHEMA_DIR
+from pipeline.process_filing import find_original_version, is_amendment
 from schema.graph import SchemaGraph
-from schema.schema_types import SchemaVersion, Concept, CalcArc
-from pipeline.process_filing import is_amendment, find_original_version
-
-SCHEMA_DIR = Path(__file__).parent.parent / "schema_versions"
+from schema.schema_types import CalcArc, Concept, SchemaVersion
+from schema.version_store import SchemaStore
 
 
 def test_is_amendment_detection():

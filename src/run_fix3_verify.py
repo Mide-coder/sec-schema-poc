@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-"""
-run_fix3 Verification
-
-Wipe schema_versions, rebuild v0, reprocess all APLD filings end-to-end.
-Capture state for comparison and determinism check.
-"""
+"""Wipes schema versions, rebuilds v0, and verifies end-to-end determinism."""
 
 import json
 import logging
@@ -12,10 +6,9 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
-
-from schema.v0_builder import build_v0_from_filing, save_version
+from config import CACHE_DIR, CIK, SCHEMA_DIR
 from pipeline.process_filing import process_filing
+from schema.v0_builder import build_v0_from_filing, save_version
 from schema.version_store import SchemaStore
 
 if sys.platform == "win32":
@@ -27,10 +20,6 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
-
-CACHE_DIR = Path(__file__).parent.parent / "cache"
-SCHEMA_DIR = Path(__file__).parent.parent / "schema_versions"
-CIK = "0001144879"
 
 
 def load_all_filings() -> list[dict]:

@@ -1,20 +1,13 @@
-
-"""
-diff_engine.py
-
-Classifies every debt concept in a new filing against the current schema version.
-"""
-
-from __future__ import annotations
+"""Classifies debt concepts in new filings against the active schema version."""
 
 import logging
 from dataclasses import dataclass, field
 
 from arelle import XbrlConst
 
-from schema.schema_types import SchemaVersion, Concept, CalcArc, DimensionArc
 from schema.graph import SchemaGraph
-from xbrl_utils import classify_namespace, DEBT_KEYWORDS
+from schema.schema_types import CalcArc, Concept, DimensionArc, SchemaVersion
+from xbrl_utils import DEBT_KEYWORDS, classify_namespace
 
 logger = logging.getLogger(__name__)
 

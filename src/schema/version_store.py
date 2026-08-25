@@ -1,22 +1,11 @@
-#!/usr/bin/env python3
-"""
-version_store.py
-
-Immutable schema version store.
-- Loads existing versions from disk
-- Creates new versions only if content hash changed (no-op detection)
-- Enforces immutability: no written file is ever edited
-- Answers point-in-time queries by date or accession
-"""
-
-from __future__ import annotations
+"""Version store: manages immutable schema versions on disk."""
 
 import json
 import logging
 from pathlib import Path
 
-from schema.schema_types import SchemaVersion
 from schema.graph import SchemaGraph
+from schema.schema_types import SchemaVersion
 
 logger = logging.getLogger(__name__)
 

@@ -1,23 +1,17 @@
-#!/usr/bin/env python3
-"""
-report_generator.py
-
-Generate a provenance report for each processed filing.
-"""
-
-from __future__ import annotations
+"""Generates provenance reports for processed SEC filings."""
 
 import json
 import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from schema.schema_types import SchemaVersion
+from config import PROJECT_ROOT
 from schema.graph import SchemaGraph
+from schema.schema_types import SchemaVersion
 
 logger = logging.getLogger(__name__)
 
-REPORTS_DIR = Path("reports")
+REPORTS_DIR = PROJECT_ROOT / "reports"
 
 
 @dataclass

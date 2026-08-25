@@ -1,11 +1,4 @@
-#!/usr/bin/env python3
-"""
-run_clean.py
-
-Full clean-run of the pipeline from scratch.
-Wipes schema_versions, rebuilds v0, processes all APLD filings,
-and compares results against the captured baseline.
-"""
+"""Runs full clean pipeline rebuild and verifies results against baseline."""
 
 import json
 import logging
@@ -13,10 +6,9 @@ import sys
 import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent))
-
-from schema.v0_builder import build_v0_from_filing, save_version, load_version
+from config import CACHE_DIR, CIK, SCHEMA_DIR
 from pipeline.process_filing import process_filing
+from schema.v0_builder import build_v0_from_filing, load_version, save_version
 from schema.version_store import SchemaStore
 
 if sys.platform == "win32":
@@ -28,10 +20,6 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
-
-CACHE_DIR = Path(__file__).parent.parent / "cache"
-SCHEMA_DIR = Path(__file__).parent.parent / "schema_versions"
-CIK = "0001144879"
 
 
 def load_all_filings() -> list[dict]:

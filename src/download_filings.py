@@ -1,17 +1,11 @@
-
-"""
-download_filings.py
-
-Orchestrator: loads APLD's filing history from cache,
-then downloads XBRL taxonomy files for each filing with full
-rate-limit compliance and cache reuse.
-"""
+"""Downloads XBRL taxonomy files for cached APLD filings."""
 
 import json
 import logging
 import sys
 from pathlib import Path
 
+from config import CACHE_DIR, CIK, USER_AGENT
 from downloader import SECDownloader
 from rate_limiter import RateLimiter
 
@@ -21,9 +15,6 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 
-CIK = "0001144879"
-USER_AGENT = "Mide-project adegboyeayomide822@gmail.com"
-CACHE_DIR = Path("cache")
 SUBMISSIONS_FILE = CACHE_DIR / CIK / "submissions.json"
 
 

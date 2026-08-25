@@ -1,27 +1,16 @@
-#!/usr/bin/env python3
-"""
-validate_pipeline.py
+"""Validates schema growth and no-op behavior with held-back filings."""
 
-Feed held-back filings one at a time.
-Demonstrate: schema begins with standard taxonomy, grows with new filings,
-no-op when unchanged, historical reports remain valid.
-"""
-
+import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
+from config import CIK, SCHEMA_DIR
 from pipeline.process_filing import process_filing
-from schema.version_store import SchemaStore
 from pipeline.report_generator import build_report, save_report
-import json
+from schema.version_store import SchemaStore
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
-
-CIK = "0001144879"
-SCHEMA_DIR = Path("schema_versions")
 
 # The 3 held-back filings from the full history run
 HELD_BACK = [

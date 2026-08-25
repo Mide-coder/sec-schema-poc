@@ -1,28 +1,12 @@
-#!/usr/bin/env python3
-"""
-cli.py
-
-CLI entry point for schema inspection commands.
-
-Usage:
-    python -m src.cli show-schema --date 2024-01-15
-    python -m src.cli show-schema --accession 0001144879-24-000010
-"""
-
-from __future__ import annotations
+"""CLI interface for inspecting schema versions and concept history."""
 
 import argparse
 import json
 import sys
 from pathlib import Path
 
-# Ensure src/ is on path
-sys.path.insert(0, str(Path(__file__).parent))
-
+from config import CACHE_DIR, SCHEMA_DIR
 from schema.version_store import SchemaStore
-
-SCHEMA_DIR = Path(__file__).parent.parent / "schema_versions"
-CACHE_DIR = Path(__file__).parent.parent / "cache"
 
 
 def build_date_index(cache_dir: Path) -> dict[str, str]:

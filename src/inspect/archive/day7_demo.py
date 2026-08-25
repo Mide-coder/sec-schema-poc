@@ -1,22 +1,15 @@
-"""
-version_store_test.py
-
-Test SchemaStore — load v0, verify no-op detection, immutability.
-"""
+"""Demonstrates SchemaStore operations, immutability, and no-op detection."""
 
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from schema.version_store import SchemaStore
+from config import SCHEMA_DIR
 from schema.graph import SchemaGraph
 from schema.v0_builder import load_version
+from schema.version_store import SchemaStore
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
-
-SCHEMA_DIR = Path("schema_versions")
 
 
 def main():

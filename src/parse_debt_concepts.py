@@ -1,10 +1,4 @@
-
-"""
-parse_debt_concepts.py
-
- Load one APLD filing with Arelle and extract debt-related concepts.
-Designed for reuse in the processing pipeline.
-"""
+"""Parses SEC filings with Arelle to extract debt-related concepts."""
 
 import argparse
 import logging

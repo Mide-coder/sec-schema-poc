@@ -1,19 +1,13 @@
-#!/usr/bin/env python3
-"""
-test_rate_limiter_stress.py
+"""Stress tests for rate limiter and retry backoff logic."""
 
-Stress test the rate limiter and retry/backoff logic.
-"""
-
-import sys
-import time
 import random
+import time
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
-
-from rate_limiter import RateLimiter
 import requests
+
+from config import CACHE_DIR, CIK
+from rate_limiter import RateLimiter
 
 
 class FailingSession:

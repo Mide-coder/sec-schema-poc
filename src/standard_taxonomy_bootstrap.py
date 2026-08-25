@@ -1,22 +1,13 @@
-
-"""
-standard_taxonomy_bootstrap.py
-
- Build the standard US-GAAP debt concept seed list by walking
-calculation arcs from known standard debt roots within the loaded model.
-This becomes Schema v0 — the baseline before any company extensions.
-"""
-
-from __future__ import annotations
+"""Extracts standard US-GAAP debt taxonomy baseline via calculation arc traversal."""
 
 import logging
 from dataclasses import dataclass, field
 
 from xbrl_utils import (
-    classify_namespace,
     DEBT_KEYWORDS,
-    US_GAAP_DEBT_ROOTS,
     STANDARD_URI_FRAGMENTS,
+    US_GAAP_DEBT_ROOTS,
+    classify_namespace,
 )
 
 logger = logging.getLogger(__name__)

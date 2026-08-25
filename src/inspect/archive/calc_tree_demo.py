@@ -1,22 +1,15 @@
+"""Demonstrates calculation tree extraction from APLD FY2025 10-K filing."""
 
-"""
-calc_tree_demo.py
-
- Extract calculation trees for debt concepts from APLD's FY2025 10-K.
-"""
-
+import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
 from arelle import Cntlr
+
 from calc_tree import CalcTreeExtractor, print_calc_tree, tree_to_dict
-import json
+from config import CACHE_DIR, CIK
 
 FILING = "0001144879-25-000021"
-CIK = "0001144879"
-CACHE_DIR = Path("cache")
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")

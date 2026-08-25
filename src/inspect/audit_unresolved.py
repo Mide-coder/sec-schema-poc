@@ -1,22 +1,16 @@
-#!/usr/bin/env python3
-"""
-unresolved_audit.py
-
-List every unresolved concept across all schema versions.
-"""
+"""Audits and lists all unresolved concepts across schema versions."""
 
 import sys
-from pathlib import Path
 from collections import Counter
+from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
+from config import PROJECT_ROOT, SCHEMA_DIR
 from schema.version_store import SchemaStore
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
-store = SchemaStore(Path("schema_versions"))
+store = SchemaStore(SCHEMA_DIR)
 
 # Collect all unresolved concepts across all versions
 all_unresolved: list[tuple[str, str, str]] = []  # (name, version_id, source_filing)
@@ -41,7 +35,7 @@ for name, count in freq.most_common(20):
     print(f"  {count:>3}x  {name}")
 
 # Save full list
-out = Path("reports/unresolved_audit.txt")
+out = PROJECT_ROOT / "reports" / "unresolved_audit.txt"
 out.parent.mkdir(parents=True, exist_ok=True)
 with open(out, "w", encoding="utf-8") as f:
     f.write("UNRESOLVED CONCEPT AUDIT\n")

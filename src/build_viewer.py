@@ -1,19 +1,15 @@
-#!/usr/bin/env python3
-"""Generate schema_viewer.html with embedded schema data."""
+"""Generates interactive schema viewer HTML with embedded version data."""
 
 import json
 from pathlib import Path
 
-SCHEMA_DIR = Path(__file__).parent.parent / "schema_versions"
-CACHE_DIR = Path(__file__).parent.parent / "cache"
-OUT = Path(__file__).parent.parent / "schema_viewer.html"
+from config import CACHE_DIR, PROJECT_ROOT, SCHEMA_DIR
+from schema.version_store import SchemaStore
+
+OUT = PROJECT_ROOT / "schema_viewer.html"
 
 
 def collect_data():
-    import sys
-    sys.path.insert(0, str(Path(__file__).parent))
-    from schema.version_store import SchemaStore
-
     store = SchemaStore(SCHEMA_DIR)
 
     acc_to_date = {}

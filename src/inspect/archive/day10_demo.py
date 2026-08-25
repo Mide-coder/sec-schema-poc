@@ -1,26 +1,15 @@
+"""Demonstrates sequential filing processing and schema evolution across history."""
 
-"""
-day10_demo.py
-
-Day 10: Process APLD's filing history sequentially.
-Shows schema evolution, no-op detection, and version log.
-"""
-
+import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
+from config import CACHE_DIR, CIK, SCHEMA_DIR
 from pipeline.process_filing import process_filing
 from schema.version_store import SchemaStore
-import json
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
-
-CIK = "0001144879"
-CACHE_DIR = Path("cache")
-SCHEMA_DIR = Path("schema_versions")
 
 
 def load_filings() -> list[dict]:

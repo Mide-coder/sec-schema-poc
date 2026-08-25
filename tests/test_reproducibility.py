@@ -1,22 +1,12 @@
-#!/usr/bin/env python3
-"""
-test_reproducibility.py
+"""Verify deterministic schema version output across runs."""
 
-Run the full pipeline twice on cached filings to verify deterministic output.
-Assert identical output (same version IDs, same hashes).
-"""
-
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
-
+from config import SCHEMA_DIR
 from schema.version_store import SchemaStore
 
 
 def test_versions_stable():
     """Verify that re-running doesn't create new versions for cached data."""
-    store = SchemaStore(Path("schema_versions"))
+    store = SchemaStore(SCHEMA_DIR)
     versions_before = store.list_versions()
     hashes_before = {v: store.get_version(v).content_hash for v in versions_before}
 
@@ -24,7 +14,7 @@ def test_versions_stable():
     print(f"Hashes: {hashes_before}")
 
     # Re-load store to verify stability
-    store2 = SchemaStore(Path("schema_versions"))
+    store2 = SchemaStore(SCHEMA_DIR)
     versions_after = store2.list_versions()
     hashes_after = {v: store2.get_version(v).content_hash for v in versions_after}
 

@@ -1,5 +1,3 @@
-import sys
-sys.path.insert(0, "src")
 from fetch_submissions import fetch_submissions
 
 try:

@@ -1,26 +1,18 @@
-
-"""
-re_evaluate.py
-
- Self-healing re-evaluation.
-After schema grows, re-classify prior filings' unresolved concepts
-against the NEW schema — without mutating historical versions.
-"""
-
-from __future__ import annotations
+"""Re-evaluates unresolved concepts from historical filings against newer schema versions."""
 
 import json
 import logging
 from dataclasses import dataclass, field
 from pathlib import Path
 
-from schema.diff_engine import DiffEngine, NEW_EXTENSION_UNRESOLVED
-from schema.version_store import SchemaStore
+from config import PROJECT_ROOT
+from schema.diff_engine import NEW_EXTENSION_UNRESOLVED, DiffEngine
 from schema.schema_types import SchemaVersion
+from schema.version_store import SchemaStore
 
 logger = logging.getLogger(__name__)
 
-REPORTS_DIR = Path("reports")
+REPORTS_DIR = PROJECT_ROOT / "reports"
 
 
 @dataclass

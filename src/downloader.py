@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-"""
-downloader.py
-
-SECDownloader: fetches XBRL taxonomy files from SEC EDGAR with
-rate limiting, retry logic, atomic caching, and graceful error handling.
-"""
+"""SECDownloader: fetches XBRL filings from SEC EDGAR with rate limiting."""
 
 import logging
 import random
@@ -42,34 +36,24 @@ class SECDownloader:
     def _request(self, url: str, context: str = "") -> requests.Response:
         for attempt in range(_MAX_RETRIES + 1):
             self.rate_limiter.acquire(context=context)
-            logger.info("GET %s (attempt %d/%d)", url, attempt + 1, _MAX_RETRIES + 1)
-
             try:
                 response = self.session.get(url, timeout=_REQUEST_TIMEOUT)
+                if response.status_code == 200:
+                    logger.info("GET %s", url)
+                    return response
+                if response.status_code in _RETRYABLE_STATUS_CODES and attempt < _MAX_RETRIES:
+                    sleep_time = (2 ** attempt) + random.uniform(0, 1)
+                    logger.warning("HTTP %d on %s, retrying in %.1fs...", response.status_code, url, sleep_time)
+                    time.sleep(sleep_time)
+                    continue
+                response.raise_for_status()
             except requests.Timeout:
                 if attempt < _MAX_RETRIES:
                     sleep_time = (2 ** attempt) + random.uniform(0, 1)
                     logger.warning("Timeout on %s, retrying in %.1fs...", url, sleep_time)
                     time.sleep(sleep_time)
                     continue
-                logger.error("Timeout on %s after %d attempts", url, _MAX_RETRIES + 1)
                 raise
-
-            if response.status_code == 200:
-                return response
-
-            if 400 <= response.status_code < 500 and response.status_code != 429:
-                logger.error("Client error %d on %s — not retrying", response.status_code, url)
-                response.raise_for_status()
-
-            if response.status_code in _RETRYABLE_STATUS_CODES:
-                if attempt < _MAX_RETRIES:
-                    sleep_time = (2 ** attempt) + random.uniform(0, 1)
-                    logger.warning("HTTP %d on %s, retrying in %.1fs...", response.status_code, url, sleep_time)
-                    time.sleep(sleep_time)
-                    continue
-
-            response.raise_for_status()
 
         raise requests.HTTPError(f"Max retries exceeded for {url}")
 

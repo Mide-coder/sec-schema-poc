@@ -1,24 +1,16 @@
-
-"""
-taxonomy_extraction.py
-
-SchemaRef extraction, standard taxonomy bootstrap,
-and dimension extraction on APLD's FY2025 10-K.
-"""
+"""Demonstrates taxonomy extraction and dimensions on APLD FY2025 10-K."""
 
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
 from arelle import Cntlr
+
+from config import CACHE_DIR, CIK
+from dimension_extractor import DimensionExtractor, print_dimensions
 from schema_ref_extractor import extract_taxonomy_info
 from standard_taxonomy_bootstrap import StandardTaxonomyBootstrap, print_seed_list
-from dimension_extractor import DimensionExtractor, print_dimensions
 
 FILING = "0001144879-25-000021"
-CIK = "0001144879"
-CACHE_DIR = Path("cache")
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")

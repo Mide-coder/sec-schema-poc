@@ -1,16 +1,13 @@
-#fetch_submissions.py fetches APLD's submission history from SEC EDGAR and caches it locally.
+"""Fetches company submission history from SEC EDGAR and caches locally."""
+
 import json
 import logging
-import os
-import sys
 from pathlib import Path
 
 import requests
 
+from config import CACHE_DIR, CIK, USER_AGENT
 
-#  Logging Setup
-# contains logging it has levels, timestamps, and can
-# be redirected to files or monitoring systems without code changes.
 logging.basicConfig(
     level=logging.INFO,
     format="%(asctime)s [%(levelname)s] %(message)s",
@@ -18,25 +15,9 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-
-# Configuration 
-# Read from environment with a fallback. This lets CI/CD inject values
-# without touching source code.
-CIK = "0001144879"
 SUBMISSIONS_URL = f"https://data.sec.gov/submissions/CIK{CIK}.json"
-
-# CRITICAL: The SEC requires User-Agent. Fail fast if missing.
-USER_AGENT = os.environ.get("SEC_USER_AGENT", "").strip()
-if not USER_AGENT:
-    # Fallback for local development only — not for CI.
-    USER_AGENT = "Mide-project  adegboyeayomide822@gmail.com"
-    logger.warning("SEC_USER_AGENT not set in environment, using fallback.")
-
-CACHE_DIR = Path("cache") / CIK
-CACHE_FILE = CACHE_DIR / "submissions.json"
-
-# Network resilience: timeout prevents infinite hangs.
-REQUEST_TIMEOUT = 30  # seconds
+CACHE_FILE = CACHE_DIR / CIK / "submissions.json"
+REQUEST_TIMEOUT = 30
 
 
 #  Core Functions

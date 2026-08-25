@@ -1,10 +1,4 @@
-
-"""
-xbrl_utils.py
-
-Shared constants and helpers for XBRL parsing.
-
-"""
+"""Shared constants and namespace helpers for XBRL parsing."""
 
 from typing import Final
 

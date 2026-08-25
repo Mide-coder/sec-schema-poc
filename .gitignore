@@ -20,3 +20,8 @@ schema_viewer.html
 
 # Pre-fix backup
 schema_versions_pre_fix/
+
+# Python packaging artifacts
+*.egg-info/
+build/
+dist/

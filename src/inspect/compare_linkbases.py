@@ -1,25 +1,4 @@
-"""
-compare_linkbases.py
-
-Pick one debt-related concept that appears in BOTH the calculation linkbase
-(_cal.xml) and the presentation linkbase (_pre.xml) of the same filing, then
-show it side-by-side:
-
-  - CALCULATION linkbase: what sums into it (parent -> children, weight, order)
-    e.g. LongTermDebt = InNextTwelveMonths + InYearTwo + ... (the MATH)
-  - PRESENTATION linkbase: how it's displayed on the statement (order,
-    parent context) (the LAYOUT)
-
-Key teaching point: a concept can be a summation PARENT in _cal but a single
-LINE ITEM (child) in _pre -- that's exactly what happens with
-us-gaap:LongTermDebt in this filing.
-
-Usage:
-    python compare_linkbases.py [path/to/_cal.xml] [path/to/_pre.xml]
-    (defaults to the cached 10-K's apld-20260531_cal.xml and _pre.xml)
-"""
-
-from __future__ import annotations
+"""Compares calculation and presentation linkbases for debt concepts."""
 
 import sys
 from pathlib import Path

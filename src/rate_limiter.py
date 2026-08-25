@@ -1,10 +1,4 @@
-
-"""
-rate_limiter.py
-
-Sliding-window rate limiter enforcing max N requests per second.
-Thread-safe for future parallelization
-"""
+"""Sliding-window rate limiter enforcing request rate limits."""
 
 import logging
 import threading

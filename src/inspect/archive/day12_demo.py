@@ -1,27 +1,16 @@
-#!/usr/bin/env python3
-"""
-generate_reports.py
+"""Generates provenance reports for all processed filings without data leaks."""
 
-Generate reports for all processed filings.
-Verify no future information leaks into earlier reports.
-"""
-
+import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
-from schema.version_store import SchemaStore
-from schema.graph import SchemaGraph
+from config import CACHE_DIR, CIK, SCHEMA_DIR
 from pipeline.report_generator import build_report, save_report
-import json
+from schema.graph import SchemaGraph
+from schema.version_store import SchemaStore
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
-
-CACHE_DIR = Path("cache")
-CIK = "0001144879"
-SCHEMA_DIR = Path("schema_versions")
 
 
 def get_filing_info(accession: str) -> dict:

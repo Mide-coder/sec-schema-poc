@@ -1,26 +1,17 @@
-
-"""
-process_filing.py
-
- End-to-end pipeline for a single filing.
-download (if needed) -> parse -> diff -> create version (or no-op)
-"""
-
-from __future__ import annotations
+"""Process SEC XBRL filings and update schema versions."""
 
 import logging
-import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
 from arelle import Cntlr
+
+from config import CACHE_DIR, CIK, SCHEMA_DIR, USER_AGENT
 from downloader import SECDownloader
 from rate_limiter import RateLimiter
-from schema.version_store import SchemaStore
 from schema.diff_engine import DiffEngine
 from schema.graph import SchemaGraph
-from schema.schema_types import SchemaVersion, Concept, CalcArc, DimensionArc
+from schema.schema_types import CalcArc, Concept, DimensionArc, SchemaVersion
+from schema.version_store import SchemaStore
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,9 +20,20 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-CACHE_DIR = Path("cache")
-SCHEMA_DIR = Path("schema_versions")
-USER_AGENT = "Mide-project adegboyeayomide822@gmail.com"
+
+def is_amendment(accession: str, form_type: str | None) -> bool:
+    """Return True if form_type indicates an amended filing (ends with /A)."""
+    return bool(form_type and form_type.endswith("/A"))
+
+
+def find_original_version(store: SchemaStore, accession: str) -> str | None:
+    """Find the version ID of the original filing that an amendment amends."""
+    base_accession = accession.rstrip("/A").split("/")[0]
+    for vid in store.list_versions():
+        v = store.get_version(vid)
+        if v and v.source_filing == base_accession:
+            return vid
+    return None
 
 
 def ensure_filing_cached(cik: str, accession: str) -> bool:
@@ -55,8 +57,7 @@ def ensure_filing_cached(cik: str, accession: str) -> bool:
 
 def load_filing_model(accession: str):
     """Load cached filing into Arelle."""
-    cik = "0001144879"
-    filing_dir = CACHE_DIR / cik / accession
+    filing_dir = CACHE_DIR / CIK / accession
 
     # Prefer instance document (has facts/contexts)
     entry_points = list(filing_dir.glob("*_htm.xml"))

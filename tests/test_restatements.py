@@ -1,18 +1,8 @@
-#!/usr/bin/env python3
-"""
-test_restatements.py
+"""Tests for detecting relationship-only schema changes."""
 
-Test that relationship-only changes (no new concepts)
-are detected and versioned correctly.
-"""
-
-import sys
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
-
-from schema.schema_types import SchemaVersion, Concept, CalcArc
+from config import SCHEMA_DIR
 from schema.graph import SchemaGraph
+from schema.schema_types import CalcArc, Concept, SchemaVersion
 from schema.version_store import SchemaStore
 
 
@@ -32,7 +22,7 @@ def test_restatement_detects_relationship_change():
     graph.add_calc_arc(CalcArc("LongTermDebt", "ComponentA", 1.0, 1.0))
     
     # Simulate: process this as a "filing" to get a baseline
-    store = SchemaStore(Path("schema_versions"))
+    store = SchemaStore(SCHEMA_DIR)
     # (In real use, you'd compare against the actual prior version)
     
     # Now simulate restatement: same concepts, different weight

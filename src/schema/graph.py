@@ -1,19 +1,11 @@
-
-"""
-graph.py
-
-Day 7: networkx-based directed graph for schema concepts and relationships.
-Builds SchemaVersion v0 from standard taxonomy, supports diff operations.
-"""
-
-from __future__ import annotations
+"""Directed graph representation of schema concepts and relationships."""
 
 import logging
 from typing import Any
 
 import networkx as nx
 
-from schema.schema_types import Concept, CalcArc, DimensionArc, SchemaVersion
+from schema.schema_types import CalcArc, Concept, DimensionArc, SchemaVersion
 
 logger = logging.getLogger(__name__)
 

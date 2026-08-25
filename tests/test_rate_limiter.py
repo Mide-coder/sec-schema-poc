@@ -1,17 +1,7 @@
-#!/usr/bin/env python3
-"""
-test_rate_limiter.py
+"""Tests for token bucket rate limiting and thread safety."""
 
-Proves the rate limiter never exceeds 10 requests in any 1-second window.
-Also verifies thread-safety and burst handling.
-"""
-
-import sys
 import threading
 import time
-from pathlib import Path
-
-sys.path.insert(0, str(Path(__file__).parent.parent / "src"))
 
 from rate_limiter import RateLimiter
 

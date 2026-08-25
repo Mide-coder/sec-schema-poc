@@ -1,26 +1,15 @@
+"""Processes historical filings while reserving held-back subset for validation."""
 
-"""
-day11_full_history.py
-
- Process all APLD filings except the 2-3 most recent.
-Hold back recent filings for Day 13 validation demo.
-"""
-
+import json
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
+from config import CACHE_DIR, CIK, SCHEMA_DIR
 from pipeline.process_filing import process_filing
 from schema.version_store import SchemaStore
-import json
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
-
-CIK = "0001144879"
-CACHE_DIR = Path("cache")
-SCHEMA_DIR = Path("schema_versions")
 
 # Hold back the 3 most recent filings for validation
 HOLD_BACK_COUNT = 3

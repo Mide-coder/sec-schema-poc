@@ -1,44 +1,22 @@
-"""
-inspect_all.py
-
-Runs all four diagnostic scripts against the cached 10-K (0001144879-26-000048)
-and produces a single consolidated report:
-
-  notes/xbrl_inspection_report.txt
-
-The four inspections:
-  1. inspect_namespaces  -- which namespaces are standard vs company
-  2. inspect_calc        -- debt-related calculation arcs (table + tree)
-  3. inspect_instance    -- actual fact values + context details
-  4. compare_linkbases   -- calc vs presentation for one shared debt concept
-
-Usage:
-    python inspect_all.py
-"""
-
-from __future__ import annotations
+"""Runs diagnostic XBRL inspections and generates a consolidated report."""
 
 import sys
 from pathlib import Path
 
 from common import (
-    InspectionError,
     PROJECT_ROOT,
     TARGET_CAL,
     TARGET_INSTANCE,
     TARGET_PRE,
+    InspectionError,
     banner,
     ensure_notes_dir,
     format_exception,
 )
-
-# Make sibling modules importable when run from anywhere
-sys.path.insert(0, str(Path(__file__).resolve().parent))
-
-from compare_linkbases import compare_linkbases  # noqa: E402
-from inspect_calc import inspect_calc  # noqa: E402
-from inspect_instance import inspect_instance  # noqa: E402
-from inspect_namespaces import inspect_namespaces  # noqa: E402
+from compare_linkbases import compare_linkbases
+from inspect_calc import inspect_calc
+from inspect_instance import inspect_instance
+from inspect_namespaces import inspect_namespaces
 
 
 def run_all(*, echo: bool = True) -> str:

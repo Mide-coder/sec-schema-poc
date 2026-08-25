@@ -1,22 +1,4 @@
-"""
-inspect_calc.py
-
-Inspect a calculation linkbase (_cal.xml) and print all calculation arcs
-where the parent or child concept name matches debt-related keywords.
-
-For each arc we show:
-  - parent concept (prefix:name)
-  - child concept (prefix:name)
-  - weight (+1.0 / -1.0)
-  - order
-  - whether each side is standard (us-gaap/dei/srt) or company (apld)
-
-Usage:
-    python inspect_calc.py [path/to/_cal.xml]
-    (defaults to the cached 10-K's apld-20260531_cal.xml)
-"""
-
-from __future__ import annotations
+"""Inspects calculation linkbases and displays debt-related calculation arcs."""
 
 import sys
 from pathlib import Path

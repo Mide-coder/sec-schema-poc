@@ -1,16 +1,14 @@
 # APLD Schema Tracker
 
-Self-healing, point-in-time XBRL schema tracker for SEC filings.
+This tracks how APLD (CIK 0001144879) uses XBRL debt concepts across its SEC filing history. It starts with the standard US-GAAP taxonomy, then learns company-specific extensions from each filing in chronological order.
 
-## Problem
+## Overview
 
-Companies evolve their accounting vocabulary over time. APLD (Applied Digital, CIK 0001144879) creates custom XBRL concepts like `CIMPromissoryNoteMember` and `TheStarionLoanAgreementMember` that don't exist in the standard US-GAAP taxonomy. These extensions relate to debt disclosures — loan agreements, warrant exercises, convertible notes — but the relationship to standard concepts is implicit in the filing's linkbase structure, not declared explicitly.
+Companies evolve their accounting vocabulary over time. APLD (Applied Digital, CIK 0001144879) creates custom XBRL concepts like `CIMPromissoryNoteMember` and `TheStarionLoanAgreementMember` for debt disclosures (loan agreements, warrant exercises, convertible notes) that do not exist in standard US-GAAP.
 
-**The core challenge:** when processing a 2022 filing, the system can only use knowledge available in 2022. It cannot use a 2025 filing's linkbase to interpret a 2022 concept. This is point-in-time integrity — the same constraint that governs financial auditing.
+When processing historical filings, the system maintains strict point-in-time integrity: earlier filings are processed using only knowledge available up to that filing date, without leaking future linkbases. Filings are processed chronologically to discover relationships between company-created concepts and standard FASB concepts, producing an immutable versioned schema. Concepts are classified into five categories based on concrete evidence (calculation arc weights, namespace URIs, and dimensional relationships).
 
-**What this system does:** It processes SEC XBRL filings chronologically, discovers how company-created debt concepts relate to standard FASB taxonomy concepts, and builds an immutable versioned schema that grows more complete with each filing processed. Each concept is classified into one of five categories with concrete evidence (calc arc weight, namespace URI, dimension membership) rather than heuristics.
-
-**Company history note:** all 21 filings share a single CIK, `0001144879`. The company has renamed twice on record with the SEC — Flight Safety Technologies → Applied Science Products → **Applied Blockchain, Inc.** (2021–2023) → **Applied Digital Corp.** (2023–present). Filings from the "Applied Blockchain" era use the `appliedblockchaininc.com` XBRL namespace for company extensions even though it's the same legal entity as today's APLD.
+**Company history note:** All 21 filings share CIK `0001144879`. The company has renamed twice on record with the SEC: Flight Safety Technologies → Applied Science Products → **Applied Blockchain, Inc.** (2021–2023) → **Applied Digital Corp.** (2023–present). Filings from the Applied Blockchain era use the `appliedblockchaininc.com` XBRL namespace for company extensions under the same legal entity.
 
 ## Architecture
 
@@ -55,7 +53,7 @@ Companies evolve their accounting vocabulary over time. APLD (Applied Digital, C
 | `src/schema/diff_engine.py` | Classifies every debt concept into 5 categories using calc arcs, dimension arcs, namespace URIs, keyword exclusion, and debt-family relationship checks |
 | `src/schema/v0_builder.py` / `src/standard_taxonomy_bootstrap.py` | Builds the v0 baseline (see "How v0 is built" below) |
 | `src/schema/version_store.py` | Immutable JSON version files with hash-based no-op detection, scoped to debt-relevant arcs |
-| `src/schema/schema_types.py` | Frozen dataclasses: `Concept`, `CalcArc`, `DimensionArc`, `SchemaVersion` |
+| `src/schema/schema_types.py` | Dataclasses: `Concept`, `CalcArc`, `DimensionArc`, `SchemaVersion` |
 | `src/schema/graph.py` | In-memory schema graph, serializes to `SchemaVersion` |
 | `src/downloader.py` | Rate-limited SEC EDGAR fetcher with atomic cache writes |
 | `src/pipeline/process_filing.py` | End-to-end pipeline: load filing → diff → create version |

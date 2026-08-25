@@ -1,39 +1,15 @@
-"""
-common.py
-
-Shared helpers for the Day-3 XBRL inspection scripts.
-
-Design notes
-------------
-- Everything here uses only the Python standard library (xml.etree.ElementTree).
-- Namespace prefixes are NEVER hardcoded.  The instance document declares its
-  prefixes on the <xbrl> root; the linkbase documents (cal/pre/def/lab) do NOT
-  declare concept prefixes at all -- concepts appear in locator href fragments
-  like ``#us-gaap_Liabilities``.  We therefore resolve prefixes from the actual
-  document (instance) or from the href fragment (linkbases).
-- "Standard vs company" classification is done by namespace URI:
-    * fasb.org / xbrl.sec.gov  -> standard (us-gaap, dei, srt, cyd, ecd, stpr)
-    * anything else            -> company (e.g. http://appliedblockchaininc.com/...)
-- All report output is written to the output directory and echoed to stdout.
-"""
-
-from __future__ import annotations
+"""Shared XML and linkbase inspection helpers for XBRL files."""
 
 import re
 import sys
 from pathlib import Path
 from xml.etree import ElementTree as ET
 
-# ---------------------------------------------------------------------------
-# Project layout
-# ---------------------------------------------------------------------------
+from config import CACHE_DIR, CIK, PROJECT_ROOT
 
-PROJECT_ROOT = Path(__file__).resolve().parents[2]
-CACHE_DIR = PROJECT_ROOT / "cache"
 NOTES_DIR = PROJECT_ROOT / "notes"
 
 # The 10-K filing from the local cache
-CIK = "0001144879"
 TARGET_ACCESSION = "0001144879-26-000048"
 TARGET_FILING_DIR = CACHE_DIR / CIK / TARGET_ACCESSION
 

@@ -1,23 +1,13 @@
-
-"""
-schema_types.py
-
- Immutable data structures for schema versions.
-"""
-
-from __future__ import annotations
+"""Data structures for schema versions and XBRL concepts."""
 
 import hashlib
 import json
 from dataclasses import dataclass, field
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass
 class Concept:
-    """
-    A single concept in the schema — either standard or company-invented.
-    Frozen + slots = lightweight, hashable, JSON-serializable.
-    """
+    """A single concept in the schema — standard or company-invented."""
     name: str
     namespace_uri: str
     namespace_type: str  # "STANDARD" | "COMPANY" | "OTHER"
@@ -26,7 +16,7 @@ class Concept:
     is_component: bool = False  # True if child in calc arcs
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass
 class CalcArc:
     """A summation-item arc: parent → child with weight."""
     parent_name: str
@@ -35,7 +25,7 @@ class CalcArc:
     order: float
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass
 class DimensionArc:
     """A dimensional relationship: axis → member."""
     axis_name: str
@@ -43,17 +33,9 @@ class DimensionArc:
     member_namespace_type: str
 
 
-@dataclass(frozen=True, slots=True)
+@dataclass
 class SchemaVersion:
-    """
-    Immutable snapshot of the schema at a point in time.
-    
-    version_id: "v0" for standard taxonomy baseline, "v1", "v2", etc.
-    parent_version_id: None for v0, otherwise the version this extends.
-    source_filing: Accession number that triggered this version (None for v0).
-    taxonomy_year: e.g., "2025" — the US-GAAP taxonomy year declared.
-    content_hash: SHA-256 of the debt-relevant subgraph. Used for no-op detection.
-    """
+    """Snapshot of the schema at a point in time."""
     version_id: str
     parent_version_id: str | None
     source_filing: str | None

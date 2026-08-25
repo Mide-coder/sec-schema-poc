@@ -1,17 +1,10 @@
-
-"""
-calc_tree.py
-
-Extracts calculation (summation-item) trees from Arelle models.
-"""
-
-from __future__ import annotations
+"""Extracts calculation trees and summation-item relationships from Arelle models."""
 
 import logging
 from dataclasses import dataclass, field
 
 from arelle import XbrlConst
-from xbrl_utils import classify_namespace, DEBT_KEYWORDS
+from xbrl_utils import DEBT_KEYWORDS, classify_namespace
 
 logger = logging.getLogger(__name__)
 
@@ -42,7 +35,7 @@ class CalcNode:
     label: str | None
     weight_from_parent: float
     order_from_parent: float
-    children: list[CalcNode] = field(default_factory=list, compare=False)
+    children: list["CalcNode"] = field(default_factory=list, compare=False)
 
     @property
     def is_root(self) -> bool:

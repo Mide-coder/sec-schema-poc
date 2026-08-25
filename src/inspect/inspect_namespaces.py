@@ -1,16 +1,4 @@
-"""
-inspect_namespaces.py
-
-List every namespace prefix declared in an XBRL file (instance, linkbase, or
-schema) and what it maps to, highlighting which are standard taxonomies
-(us-gaap, dei, srt, ...) versus the registrant's own namespace (apld).
-
-Usage:
-    python inspect_namespaces.py [path/to/any.xbrl-file.xml]
-    (defaults to the cached 10-K instance apld-20260531_htm.xml)
-"""
-
-from __future__ import annotations
+"""Inspects declared namespace prefixes and maps standard versus company extensions."""
 
 import sys
 from pathlib import Path

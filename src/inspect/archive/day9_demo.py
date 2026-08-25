@@ -1,15 +1,9 @@
-#!/usr/bin/env python3
-"""
-pipeline_test.py
-
-Process one filing end-to-end, then re-evaluate historical.
-"""
+"""Demonstrates end-to-end filing processing and historical re-evaluation."""
 
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
+from config import CIK, SCHEMA_DIR
 from pipeline.process_filing import process_filing
 from pipeline.re_evaluate import re_evaluate_filing, save_report
 from schema.version_store import SchemaStore
@@ -17,11 +11,9 @@ from schema.version_store import SchemaStore
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
 
-CIK = "0001144879"
-
 
 def main():
-    store = SchemaStore(Path("schema_versions"))
+    store = SchemaStore(SCHEMA_DIR)
     print(f"{'='*70}")
     print("DAY 9: END-TO-END PIPELINE + RE-EVALUATION")
     print(f"{'='*70}")

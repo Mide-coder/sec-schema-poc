@@ -1,27 +1,18 @@
-
-"""
-diff_engine_test.py
-
-Run diff engine on APLD's first 10-Q vs v0 baseline.
-"""
+"""Demonstrates diff engine classification of APLD first 10-Q against v0."""
 
 import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
 from arelle import Cntlr
-from schema.version_store import SchemaStore
+
+from config import CACHE_DIR, CIK, SCHEMA_DIR
 from schema.diff_engine import DiffEngine
 from schema.graph import SchemaGraph
 from schema.schema_types import SchemaVersion
+from schema.version_store import SchemaStore
 
 if sys.platform == "win32":
     sys.stdout.reconfigure(encoding="utf-8")
-
-CACHE_DIR = Path("cache")
-CIK = "0001144879"
-SCHEMA_DIR = Path("schema_versions")
 
 
 def load_filing(accession: str):

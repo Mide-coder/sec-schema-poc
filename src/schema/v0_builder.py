@@ -1,27 +1,17 @@
-
-"""
-v0_builder.py
-
- Build SchemaVersion v0 from the standard US-GAAP debt taxonomy.
-This is the immutable baseline before any company extensions are added.
-"""
-
-from __future__ import annotations
+"""Build SchemaVersion v0 baseline from standard US-GAAP taxonomy."""
 
 import json
 import logging
-import sys
 from pathlib import Path
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
-
 from arelle import Cntlr
-from schema.schema_types import Concept, CalcArc, DimensionArc, SchemaVersion
-from schema.graph import SchemaGraph
-from standard_taxonomy_bootstrap import StandardTaxonomyBootstrap
-from dimension_extractor import DimensionExtractor
-from schema_ref_extractor import extract_taxonomy_info
 
+from config import CACHE_DIR, CIK, SCHEMA_DIR
+from dimension_extractor import DimensionExtractor
+from schema.graph import SchemaGraph
+from schema.schema_types import CalcArc, Concept, DimensionArc, SchemaVersion
+from schema_ref_extractor import extract_taxonomy_info
+from standard_taxonomy_bootstrap import StandardTaxonomyBootstrap
 
 logging.basicConfig(
     level=logging.INFO,
@@ -29,10 +19,6 @@ logging.basicConfig(
     datefmt="%H:%M:%S",
 )
 logger = logging.getLogger(__name__)
-
-CACHE_DIR = Path("cache")
-CIK = "0001144879"
-SCHEMA_VERSIONS_DIR = Path("schema_versions")
 
 
 def build_v0_from_filing(accession: str) -> SchemaVersion | None:

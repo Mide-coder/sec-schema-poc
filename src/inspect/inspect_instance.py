@@ -1,23 +1,4 @@
-"""
-inspect_instance.py
-
-Inspect an XBRL instance document (_htm.xml) and print every fact whose
-concept name matches debt keywords (or an explicit concept list).
-
-For each matching fact we show:
-  - full concept name (prefix:name)
-  - the actual numeric value
-  - contextRef, unitRef, decimals, id
-  - whether the concept is standard (us-gaap/dei/srt) or company (apld)
-  - context details: entity identifier + period (start/end or instant),
-    plus any segment dimensions (XDT members)
-
-Usage:
-    python inspect_instance.py [path/to/_htm.xml] [concept1 concept2 ...]
-    (if no concepts given, defaults to debt-keyword search)
-"""
-
-from __future__ import annotations
+"""Inspects XBRL instance documents and extracts debt-related facts and contexts."""
 
 import sys
 from pathlib import Path
